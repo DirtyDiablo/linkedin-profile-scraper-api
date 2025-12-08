@@ -216,9 +216,10 @@ export class LinkedInProfileScraper {
       statusLog(logSection, `Launching puppeteer in the ${this.options.headless ? 'background' : 'foreground'}...`)
 
       this.browser = await puppeteer.launch({
-        headless: this.options.headless,
+        headless: this.options.headless ? 'new' : false,
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
         args: [
-          ...(this.options.headless ? '---single-process' : '---start-maximized'),
+          ...(this.options.headless ? ['--single-process'] : ['--start-maximized']),
           '--no-sandbox',
           '--disable-setuid-sandbox',
           "--proxy-server='direct://",
@@ -433,7 +434,7 @@ export class LinkedInProfileScraper {
           await this.browser.close();
           statusLog(loggerPrefix, 'Closed browser!');
 
-          const browserProcessPid = this.browser.process().pid;
+          const browserProcessPid = this.browser.process()?.pid;
 
           // Completely kill the browser process to prevent zombie processes
           // https://docs.browserless.io/blog/2019/03/13/more-observations.html#tip-2-when-you-re-done-kill-it-with-fire
@@ -473,7 +474,7 @@ export class LinkedInProfileScraper {
     // If we do not get redirected and stay on /login, we are logged out
     // If we get redirect to /feed, we are logged in
     await page.goto('https://www.linkedin.com/login', {
-      waitUntil: 'networkidle2',
+      waitUntil: 'networkidle2' as const,
       timeout: this.options.timeout
     })
 
@@ -519,9 +520,9 @@ export class LinkedInProfileScraper {
       statusLog(logSection, `Navigating to LinkedIn profile: ${profileUrl}`, scraperSessionId)
 
       await page.goto(profileUrl, {
-        // Use "networkidl2" here and not "domcontentloaded". 
+        // Use "networkidl2" here and not "domcontentloaded".
         // As with "domcontentloaded" some elements might not be loaded correctly, resulting in missing data.
-        waitUntil: 'networkidle2',
+        waitUntil: 'networkidle2' as const,
         timeout: this.options.timeout
       });
 
@@ -558,7 +559,7 @@ export class LinkedInProfileScraper {
       
 
       // To give a little room to let data appear. Setting this to 0 might result in "Node is detached from document" errors
-      await page.waitFor(100);
+      await new Promise(resolve => setTimeout(resolve, 100));
 
       statusLog(logSection, 'Expanding all descriptions by clicking their "See more" buttons', scraperSessionId)
 

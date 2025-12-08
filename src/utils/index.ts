@@ -2,7 +2,26 @@ import moment from 'moment-timezone'
 import { Location } from '../index';
 import { Page } from 'puppeteer';
 import countries from 'i18n-iso-countries';
-import cities from 'all-the-cities';
+
+// Common major cities for validation (all-the-cities package has Node.js v22 compatibility issues)
+const COMMON_CITIES = new Set([
+  'new york', 'los angeles', 'chicago', 'houston', 'phoenix', 'philadelphia',
+  'san antonio', 'san diego', 'dallas', 'san jose', 'austin', 'jacksonville',
+  'san francisco', 'columbus', 'fort worth', 'indianapolis', 'charlotte',
+  'seattle', 'denver', 'washington', 'boston', 'nashville', 'baltimore',
+  'oklahoma city', 'louisville', 'portland', 'las vegas', 'milwaukee',
+  'albuquerque', 'tucson', 'fresno', 'sacramento', 'mesa', 'kansas city',
+  'atlanta', 'miami', 'oakland', 'minneapolis', 'tulsa', 'cleveland',
+  'pittsburgh', 'detroit', 'raleigh', 'tampa', 'st. louis', 'new orleans',
+  'london', 'paris', 'berlin', 'madrid', 'rome', 'amsterdam', 'brussels',
+  'vienna', 'dublin', 'stockholm', 'copenhagen', 'oslo', 'helsinki',
+  'zurich', 'geneva', 'munich', 'frankfurt', 'barcelona', 'milan',
+  'toronto', 'vancouver', 'montreal', 'calgary', 'ottawa', 'edmonton',
+  'sydney', 'melbourne', 'brisbane', 'perth', 'adelaide', 'auckland',
+  'tokyo', 'osaka', 'singapore', 'hong kong', 'seoul', 'beijing', 'shanghai',
+  'mumbai', 'delhi', 'bangalore', 'dubai', 'tel aviv', 'sao paulo', 'rio de janeiro',
+  'mexico city', 'buenos aires', 'bogota', 'lima', 'santiago'
+]);
 
 export const getIsCountry = (text: string): boolean => {
   const countriesList = Object.values(countries.getNames('en'));
@@ -19,12 +38,7 @@ export const getIsCountry = (text: string): boolean => {
 
 export const getIsCity = (text: string): boolean => {
   const lowerCaseText = text.toLowerCase();
-
-  if (['new york'].includes(lowerCaseText)) {
-    return true;
-  }
-
-  return !!cities.find(city => city.name.toLowerCase() === lowerCaseText)
+  return COMMON_CITIES.has(lowerCaseText);
 }
 
 export const formatDate = (date: moment.MomentInput | string): string => {
