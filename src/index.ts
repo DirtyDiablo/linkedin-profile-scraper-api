@@ -222,8 +222,6 @@ export class LinkedInProfileScraper {
           ...(this.options.headless ? ['--single-process'] : ['--start-maximized']),
           '--no-sandbox',
           '--disable-setuid-sandbox',
-          "--proxy-server='direct://",
-          '--proxy-bypass-list=*',
           '--disable-dev-shm-usage',
           '--disable-accelerated-2d-canvas',
           '--disable-gpu',
