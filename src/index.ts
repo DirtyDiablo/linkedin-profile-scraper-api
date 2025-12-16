@@ -498,20 +498,17 @@ export class LinkedInProfileScraper {
 
     statusLog(logSection, 'Checking if we are still logged in...')
 
-    // Go to the login page of LinkedIn
-    // If we do not get redirected and stay on /login, we are logged out
-    // If we get redirect to /feed or other internal pages, we are logged in
-    await page.goto('https://www.linkedin.com/login', {
+    // Try to access the feed page - if we can access it without redirect to login, we're authenticated
+    await page.goto('https://www.linkedin.com/feed/', {
       waitUntil: 'networkidle2' as const,
       timeout: this.options.timeout
     })
 
     const url = page.url()
-    statusLog(logSection, `Final URL after login page: ${url}`)
+    statusLog(logSection, `Final URL after feed page: ${url}`)
 
-    // Check if we're logged in - if we're NOT on the login page, we're logged in
-    // Also accept other LinkedIn internal pages as valid logged-in states
-    const isLoggedIn = !url.includes('/login') && !url.includes('/authwall') && !url.includes('/checkpoint')
+    // Check if we're logged in - if we're NOT redirected to login/authwall, we're logged in
+    const isLoggedIn = !url.includes('/login') && !url.includes('/authwall') && !url.includes('/checkpoint') && !url.includes('/uas/')
 
     await page.close();
 
