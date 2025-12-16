@@ -288,7 +288,8 @@ export class LinkedInProfileScraper {
 
       statusLog(logSection, 'Puppeteer launched!')
 
-      await this.checkIfLoggedIn();
+      // Skip login check for enterprise cookies - we'll find out if auth works when scraping
+      // await this.checkIfLoggedIn();
 
       statusLog(logSection, 'Done!')
     } catch (err) {
@@ -548,29 +549,49 @@ export class LinkedInProfileScraper {
       statusLog(logSection, `Navigating to LinkedIn profile: ${profileUrl}`, scraperSessionId)
 
       await page.goto(profileUrl, {
-        // Use "networkidl2" here and not "domcontentloaded".
-        // As with "domcontentloaded" some elements might not be loaded correctly, resulting in missing data.
-        waitUntil: 'networkidle2' as const,
+        // Use "domcontentloaded" for faster initial load - autoScroll will load more data
+        waitUntil: 'domcontentloaded' as const,
         timeout: this.options.timeout
       });
 
       statusLog(logSection, 'LinkedIn profile page loaded!', scraperSessionId)
 
+      // Wait for initial content to render (LinkedIn uses heavy JS rendering)
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
       statusLog(logSection, 'Getting all the LinkedIn profile data by scrolling the page to the bottom, so all the data gets loaded into the page...', scraperSessionId)
 
       await autoScroll(page);
 
+      // Wait for lazy-loaded content to appear after scrolling
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
       statusLog(logSection, 'Parsing data...', scraperSessionId)
 
       // Only click the expanding buttons when they exist
+      // Modern LinkedIn selectors (2024-2025) + legacy fallbacks
       const expandButtonsSelectors = [
-        '.pv-profile-section.pv-about-section .lt-line-clamp__more', // About
-        '#experience-section .pv-profile-section__see-more-inline.link', // Experience
-        '.pv-profile-section.education-section button.pv-profile-section__see-more-inline', // Education
-        '.pv-skill-categories-section [data-control-name="skill_details"]', // Skills
+        // Modern "See more" buttons
+        'button.inline-show-more-text__button',
+        '.inline-show-more-text__button',
+        '[aria-label*="Show more"]',
+        '[aria-label*="see more"]',
+        // Section-specific expand buttons
+        '#about ~ div button.inline-show-more-text__button',
+        '#experience ~ div button.inline-show-more-text__button',
+        // Legacy selectors
+        '.pv-profile-section.pv-about-section .lt-line-clamp__more',
+        '#experience-section .pv-profile-section__see-more-inline.link',
+        '.pv-profile-section.education-section button.pv-profile-section__see-more-inline',
+        '.pv-skill-categories-section [data-control-name="skill_details"]',
       ];
 
-      const seeMoreButtonsSelectors = ['.pv-entity__description .lt-line-clamp__line.lt-line-clamp__line--last .lt-line-clamp__more[href="#"]', '.lt-line-clamp__more[href="#"]:not(.lt-line-clamp__ellipsis--dummy)']
+      const seeMoreButtonsSelectors = [
+        'button.inline-show-more-text__button',
+        '.inline-show-more-text__button--pedantic',
+        '.pv-entity__description .lt-line-clamp__line.lt-line-clamp__line--last .lt-line-clamp__more[href="#"]',
+        '.lt-line-clamp__more[href="#"]:not(.lt-line-clamp__ellipsis--dummy)'
+      ]
 
       statusLog(logSection, 'Expanding all sections by clicking their "See more" buttons', scraperSessionId)
 
@@ -609,24 +630,52 @@ export class LinkedInProfileScraper {
       statusLog(logSection, 'Parsing profile data...', scraperSessionId)
 
       const rawUserProfileData: RawProfile = await page.evaluate(() => {
-        const profileSection = document.querySelector('.pv-top-card')
-
         const url = window.location.href
 
-        const fullNameElement = profileSection?.querySelector('.pv-top-card--list li:first-child')
-        const fullName = fullNameElement?.textContent || null
+        // Modern LinkedIn selectors (2024-2025)
+        // Try multiple selectors for each field as LinkedIn frequently changes their DOM
 
-        const titleElement = profileSection?.querySelector('h2')
-        const title = titleElement?.textContent || null
+        // Full name - usually in h1 on profile pages
+        const fullNameElement = document.querySelector('h1.text-heading-xlarge') ||
+          document.querySelector('h1[class*="text-heading"]') ||
+          document.querySelector('.pv-text-details__left-panel h1') ||
+          document.querySelector('main h1') ||
+          document.querySelector('.pv-top-card h1') ||
+          document.querySelector('.pv-top-card--list li:first-child')
+        const fullName = fullNameElement?.textContent?.trim() || null
 
-        const locationElement = profileSection?.querySelector('.pv-top-card--list.pv-top-card--list-bullet.mt1 li:first-child')
-        const location = locationElement?.textContent || null
+        // Title/headline - usually in a div below the name
+        const titleElement = document.querySelector('.text-body-medium.break-words') ||
+          document.querySelector('div[class*="text-body-medium"]') ||
+          document.querySelector('.pv-text-details__left-panel .text-body-medium') ||
+          document.querySelector('main section:first-child div[class*="text-body-medium"]') ||
+          document.querySelector('.pv-top-card h2') ||
+          document.querySelector('.top-card-layout__headline')
+        const title = titleElement?.textContent?.trim() || null
 
-        const photoElement = profileSection?.querySelector('.pv-top-card__photo') || profileSection?.querySelector('.profile-photo-edit__preview')
+        // Location - typically near the profile header
+        const locationElement = document.querySelector('.text-body-small.inline.t-black--light.break-words') ||
+          document.querySelector('span[class*="text-body-small"][class*="t-black--light"]') ||
+          document.querySelector('.pv-text-details__left-panel span.text-body-small') ||
+          document.querySelector('.pv-top-card--list.pv-top-card--list-bullet.mt1 li:first-child') ||
+          document.querySelector('.top-card-layout__first-subline')
+        const location = locationElement?.textContent?.trim() || null
+
+        // Photo
+        const photoElement = document.querySelector('.pv-top-card-profile-picture__image') ||
+          document.querySelector('img[class*="pv-top-card-profile-picture"]') ||
+          document.querySelector('.profile-photo-edit__preview') ||
+          document.querySelector('.pv-top-card__photo') ||
+          document.querySelector('main img[class*="profile"]')
         const photo = photoElement?.getAttribute('src') || null
 
-        const descriptionElement = document.querySelector('.pv-about__summary-text .lt-line-clamp__raw-line') // Is outside "profileSection"
-        const description = descriptionElement?.textContent || null
+        // About/description section
+        const descriptionElement = document.querySelector('#about ~ div .inline-show-more-text') ||
+          document.querySelector('section[id*="about"] .inline-show-more-text') ||
+          document.querySelector('.pv-shared-text-with-see-more span[aria-hidden="true"]') ||
+          document.querySelector('.pv-about__summary-text .lt-line-clamp__raw-line') ||
+          document.querySelector('.pv-about-section .pv-about__summary-text')
+        const description = descriptionElement?.textContent?.trim() || null
 
         return {
           fullName,
@@ -652,50 +701,123 @@ export class LinkedInProfileScraper {
 
       statusLog(logSection, `Parsing experiences data...`, scraperSessionId)
 
-      const rawExperiencesData: RawExperience[] = await page.$$eval('#experience-section ul > .ember-view', (nodes) => {
-        let data: RawExperience[] = []
+      const rawExperiencesData: RawExperience[] = await page.evaluate(() => {
+        const data: RawExperience[] = []
 
-        // Using a for loop so we can use await inside of it
-        for (const node of nodes) {
-          const titleElement = node.querySelector('h3');
-          const title = titleElement?.textContent || null
+        // Modern LinkedIn (2024-2025): #experience is an anchor div, content is in next sibling
+        // Find the experience anchor and get items from the following sibling container
+        const experienceAnchor = document.querySelector('#experience')
 
-          const employmentTypeElement = node.querySelector('span.pv-entity__secondary-title');
-          const employmentType = employmentTypeElement?.textContent || null
+        let experienceItems: NodeListOf<Element> | Element[] = []
 
-          const companyElement = node.querySelector('.pv-entity__secondary-title');
-          const companyElementClean = companyElement && companyElement?.querySelector('span') ? companyElement?.removeChild(companyElement.querySelector('span') as Node) && companyElement : companyElement || null;
-          const company = companyElementClean?.textContent || null
+        if (experienceAnchor) {
+          // The actual content is in a sibling container after the anchor
+          // Find all li.artdeco-list__item elements that come after #experience
+          // by looking at the parent section/container
+          const parentSection = experienceAnchor.closest('section') || experienceAnchor.parentElement?.parentElement
+          if (parentSection) {
+            experienceItems = parentSection.querySelectorAll('li.artdeco-list__item')
+          }
 
-          const descriptionElement = node.querySelector('.pv-entity__description');
-          const description = descriptionElement?.textContent || null
-
-          const dateRangeElement = node.querySelector('.pv-entity__date-range span:nth-child(2)');
-          const dateRangeText = dateRangeElement?.textContent || null
-
-          const startDatePart = dateRangeText?.split('–')[0] || null;
-          const startDate = startDatePart?.trim() || null;
-
-          const endDatePart = dateRangeText?.split('–')[1] || null;
-          const endDateIsPresent = endDatePart?.trim().toLowerCase() === 'present' || false;
-          const endDate = (endDatePart && !endDateIsPresent) ? endDatePart.trim() : 'Present';
-
-          const locationElement = node.querySelector('.pv-entity__location span:nth-child(2)');
-          const location = locationElement?.textContent || null;
-
-          data.push({
-            title,
-            company,
-            employmentType,
-            location,
-            startDate,
-            endDate,
-            endDateIsPresent,
-            description
-          })
+          // If not found, try getting items from next sibling
+          if (experienceItems.length === 0) {
+            let sibling = experienceAnchor.nextElementSibling
+            while (sibling) {
+              const items = sibling.querySelectorAll('li.artdeco-list__item')
+              if (items.length > 0) {
+                experienceItems = items
+                break
+              }
+              sibling = sibling.nextElementSibling
+            }
+          }
         }
 
-        return data;
+        // Fallback: try legacy selectors
+        if (experienceItems.length === 0) {
+          const legacySection = document.querySelector('#experience-section')
+          if (legacySection) {
+            experienceItems = legacySection.querySelectorAll('ul > .ember-view')
+          }
+        }
+
+        for (const item of experienceItems) {
+          // Title - in the bold text with aria-hidden
+          const titleElement = item.querySelector('.mr1.hoverable-link-text.t-bold span[aria-hidden="true"]') ||
+            item.querySelector('.t-bold span[aria-hidden="true"]') ||
+            item.querySelector('.mr1.t-bold span') ||
+            item.querySelector('h3')
+          const title = titleElement?.textContent?.trim() || null
+
+          // Company name - in t-14 t-normal span
+          const companyElement = item.querySelector('span.t-14.t-normal span[aria-hidden="true"]') ||
+            item.querySelector('.t-14.t-normal span[aria-hidden="true"]')
+          let companyText = companyElement?.textContent?.trim() || null
+          let company = companyText
+          let employmentType: string | null = null
+
+          // Clean up company name (remove "· Full-time" etc)
+          if (company && company.includes('·')) {
+            const parts = company.split('·')
+            company = parts[0].trim()
+            if (parts[1]) {
+              employmentType = parts[1].trim()
+            }
+          }
+
+          // Date range - in pvs-entity__caption-wrapper
+          const dateElement = item.querySelector('.pvs-entity__caption-wrapper[aria-hidden="true"]') ||
+            item.querySelector('span.t-14.t-normal.t-black--light span[aria-hidden="true"]')
+          const dateText = dateElement?.textContent?.trim() || null
+
+          let startDate: string | null = null
+          let endDate: string | null = null
+          let endDateIsPresent = false
+
+          if (dateText) {
+            // Parse date range like "Jan 2023 - Present · 3 yrs" or "Mar 2018 - Aug 2022 · 4 yrs 6 mos"
+            const dateMatch = dateText.match(/([A-Za-z]+\s*\d{4})\s*[-–]\s*(Present|[A-Za-z]+\s*\d{4})/i)
+            if (dateMatch) {
+              startDate = dateMatch[1]?.trim() || null
+              const endPart = dateMatch[2]?.trim()
+              endDateIsPresent = endPart?.toLowerCase() === 'present'
+              endDate = endDateIsPresent ? 'Present' : endPart || null
+            }
+          }
+
+          // Location - separate span with t-black--light
+          const allLightSpans = item.querySelectorAll('span.t-14.t-normal.t-black--light span[aria-hidden="true"]')
+          let location: string | null = null
+          for (const span of allLightSpans) {
+            const text = span.textContent?.trim() || ''
+            // Location typically contains city/state/country names, not dates
+            if (text && !text.match(/^\d/) && !text.match(/Present|yrs?|mos?/i) && !text.match(/[A-Za-z]+\s+\d{4}/)) {
+              location = text
+              break
+            }
+          }
+
+          // Description - if present
+          const descriptionElement = item.querySelector('.inline-show-more-text span[aria-hidden="true"]') ||
+            item.querySelector('.inline-show-more-text')
+          const description = descriptionElement?.textContent?.trim() || null
+
+          // Only add if we have at least a title or company
+          if (title || company) {
+            data.push({
+              title,
+              company,
+              employmentType,
+              location,
+              startDate,
+              endDate,
+              endDateIsPresent,
+              description
+            })
+          }
+        }
+
+        return data
       });
 
       // Convert the raw data to clean data using our utils
@@ -727,39 +849,89 @@ export class LinkedInProfileScraper {
 
       statusLog(logSection, `Parsing education data...`, scraperSessionId)
 
-      const rawEducationData: RawEducation[] = await page.$$eval('#education-section ul > .ember-view', (nodes) => {
-        // Note: the $$eval context is the browser context.
-        // So custom methods you define in this file are not available within this $$eval.
-        let data: RawEducation[] = []
-        for (const node of nodes) {
+      const rawEducationData: RawEducation[] = await page.evaluate(() => {
+        const data: RawEducation[] = []
 
-          const schoolNameElement = node.querySelector('h3.pv-entity__school-name');
-          const schoolName = schoolNameElement?.textContent || null;
+        // Modern LinkedIn (2024-2025): #education is an anchor div
+        const educationAnchor = document.querySelector('#education')
 
-          const degreeNameElement = node.querySelector('.pv-entity__degree-name .pv-entity__comma-item');
-          const degreeName = degreeNameElement?.textContent || null;
+        let educationItems: NodeListOf<Element> | Element[] = []
 
-          const fieldOfStudyElement = node.querySelector('.pv-entity__fos .pv-entity__comma-item');
-          const fieldOfStudy = fieldOfStudyElement?.textContent || null;
+        if (educationAnchor) {
+          const parentSection = educationAnchor.closest('section') || educationAnchor.parentElement?.parentElement
+          if (parentSection) {
+            educationItems = parentSection.querySelectorAll('li.artdeco-list__item')
+          }
 
-          // const gradeElement = node.querySelector('.pv-entity__grade .pv-entity__comma-item');
-          // const grade = (gradeElement && gradeElement.textContent) ? window.getCleanText(fieldOfStudyElement.textContent) : null;
+          if (educationItems.length === 0) {
+            let sibling = educationAnchor.nextElementSibling
+            while (sibling) {
+              const items = sibling.querySelectorAll('li.artdeco-list__item')
+              if (items.length > 0) {
+                educationItems = items
+                break
+              }
+              sibling = sibling.nextElementSibling
+            }
+          }
+        }
 
-          const dateRangeElement = node.querySelectorAll('.pv-entity__dates time');
+        // Fallback: legacy selectors
+        if (educationItems.length === 0) {
+          const legacySection = document.querySelector('#education-section')
+          if (legacySection) {
+            educationItems = legacySection.querySelectorAll('ul > .ember-view')
+          }
+        }
 
-          const startDatePart = dateRangeElement && dateRangeElement[0]?.textContent || null;
-          const startDate = startDatePart || null
+        for (const item of educationItems) {
+          // School name - in the bold text
+          const schoolNameElement = item.querySelector('.mr1.hoverable-link-text.t-bold span[aria-hidden="true"]') ||
+            item.querySelector('.t-bold span[aria-hidden="true"]')
+          const schoolName = schoolNameElement?.textContent?.trim() || null
 
-          const endDatePart = dateRangeElement && dateRangeElement[1]?.textContent || null;
-          const endDate = endDatePart || null
+          // Degree and field of study - in t-14 t-normal span
+          const degreeElement = item.querySelector('span.t-14.t-normal span[aria-hidden="true"]')
+          const degreeText = degreeElement?.textContent?.trim() || null
 
-          data.push({
-            schoolName,
-            degreeName,
-            fieldOfStudy,
-            startDate,
-            endDate
-          })
+          let degreeName: string | null = null
+          let fieldOfStudy: string | null = null
+
+          if (degreeText) {
+            if (degreeText.includes(',')) {
+              const parts = degreeText.split(',')
+              degreeName = parts[0]?.trim() || null
+              fieldOfStudy = parts.slice(1).join(',').trim() || null
+            } else {
+              degreeName = degreeText
+            }
+          }
+
+          // Date range - in pvs-entity__caption-wrapper
+          const dateElement = item.querySelector('.pvs-entity__caption-wrapper[aria-hidden="true"]') ||
+            item.querySelector('span.t-14.t-normal.t-black--light span[aria-hidden="true"]')
+          const dateText = dateElement?.textContent?.trim() || null
+
+          let startDate: string | null = null
+          let endDate: string | null = null
+
+          if (dateText) {
+            const dateMatch = dateText.match(/(\d{4})\s*[-–]\s*(\d{4})/)
+            if (dateMatch) {
+              startDate = dateMatch[1]?.trim() || null
+              endDate = dateMatch[2]?.trim() || null
+            }
+          }
+
+          if (schoolName) {
+            data.push({
+              schoolName,
+              degreeName,
+              fieldOfStudy,
+              startDate,
+              endDate
+            })
+          }
         }
 
         return data
@@ -844,20 +1016,67 @@ export class LinkedInProfileScraper {
 
       statusLog(logSection, `Parsing skills data...`, scraperSessionId)
 
-      const skills: Skill[] = await page.$$eval('.pv-skill-categories-section ol > .ember-view', nodes => {
-        // Note: the $$eval context is the browser context.
-        // So custom methods you define in this file are not available within this $$eval.
+      const skills: Skill[] = await page.evaluate(() => {
+        const data: Skill[] = []
 
-        return nodes.map((node) => {
-          const skillName = node.querySelector('.pv-skill-category-entity__name-text');
-          const endorsementCount = node.querySelector('.pv-skill-category-entity__endorsement-count');
+        // Modern LinkedIn (2024-2025): #skills is an anchor div
+        const skillsAnchor = document.querySelector('#skills')
 
-          return {
-            skillName: (skillName) ? skillName.textContent?.trim() : null,
-            endorsementCount: (endorsementCount) ? parseInt(endorsementCount.textContent?.trim() || '0') : 0
-          } as Skill;
-        }) as Skill[]
-      });
+        let skillItems: NodeListOf<Element> | Element[] = []
+
+        if (skillsAnchor) {
+          const parentSection = skillsAnchor.closest('section') || skillsAnchor.parentElement?.parentElement
+          if (parentSection) {
+            skillItems = parentSection.querySelectorAll('li.artdeco-list__item')
+          }
+
+          if (skillItems.length === 0) {
+            let sibling = skillsAnchor.nextElementSibling
+            while (sibling) {
+              const items = sibling.querySelectorAll('li.artdeco-list__item')
+              if (items.length > 0) {
+                skillItems = items
+                break
+              }
+              sibling = sibling.nextElementSibling
+            }
+          }
+        }
+
+        // Fallback: legacy selectors
+        if (skillItems.length === 0) {
+          const legacySection = document.querySelector('.pv-skill-categories-section')
+          if (legacySection) {
+            skillItems = legacySection.querySelectorAll('ol > .ember-view')
+          }
+        }
+
+        for (const item of skillItems) {
+          // Skill name - in the bold text
+          const skillNameElement = item.querySelector('.mr1.hoverable-link-text.t-bold span[aria-hidden="true"]') ||
+            item.querySelector('.t-bold span[aria-hidden="true"]')
+          const skillName = skillNameElement?.textContent?.trim() || null
+
+          // Endorsement count - if visible
+          let endorsementCount = 0
+          const endorsementElement = item.querySelector('.t-14.t-black--light span[aria-hidden="true"]')
+          if (endorsementElement) {
+            const countMatch = endorsementElement.textContent?.match(/\d+/)
+            if (countMatch) {
+              endorsementCount = parseInt(countMatch[0])
+            }
+          }
+
+          if (skillName) {
+            data.push({
+              skillName,
+              endorsementCount
+            })
+          }
+        }
+
+        return data
+      }) as Skill[];
 
       statusLog(logSection, `Got skills data: ${JSON.stringify(skills)}`, scraperSessionId)
 

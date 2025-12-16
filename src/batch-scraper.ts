@@ -96,7 +96,7 @@ function generateEvidenceText(profile: any): string {
   if (profile.skills?.length > 0) {
     const topSkills = profile.skills
       .slice(0, 10)
-      .map((s: any) => s.name)
+      .map((s: any) => s.skillName || s.name)
       .filter(Boolean);
     if (topSkills.length > 0) {
       parts.push(`Skills: ${topSkills.join(", ")}`);
@@ -126,7 +126,7 @@ function normalizeProfile(url: string, rawData: any): NormalizedProfile {
       end: exp.endDateIsPresent ? null : exp.endDate || null,
       description: exp.description || null,
     })),
-    skills: (rawData.skills || []).map((s: any) => s.name).filter(Boolean),
+    skills: (rawData.skills || []).map((s: any) => s.skillName || s.name).filter(Boolean),
     evidence_text: generateEvidenceText(rawData),
     scrape_status: "success",
   };
@@ -167,58 +167,56 @@ async function scrapeProfiles(): Promise<void> {
   let successCount = 0;
   let failCount = 0;
 
-  const scraper = new LinkedInProfileScraper({
-    sessionCookieValue: `${process.env.LINKEDIN_SESSION_COOKIE_VALUE}`,
-    keepAlive: true, // Reuse browser for all scrapes
-    timeout: 60000, // Increase timeout to 60 seconds
-  });
+  for (let i = 0; i < profileUrls.length; i++) {
+    const url = profileUrls[i];
+    const progress = `[${i + 1}/${profileUrls.length}]`;
 
-  try {
-    console.log("\n[INIT] Setting up Puppeteer browser...");
-    await scraper.setup();
-    console.log("[INIT] Browser ready!\n");
+    console.log(`${progress} Scraping: ${url}`);
 
-    for (let i = 0; i < profileUrls.length; i++) {
-      const url = profileUrls[i];
-      const progress = `[${i + 1}/${profileUrls.length}]`;
+    // Create fresh scraper for each profile (more resilient)
+    const scraper = new LinkedInProfileScraper({
+      sessionCookieValue: `${process.env.LINKEDIN_SESSION_COOKIE_VALUE}`,
+      keepAlive: false,
+      timeout: 90000, // 90 second timeout
+    });
 
-      console.log(`${progress} Scraping: ${url}`);
+    try {
+      await scraper.setup();
+      const rawData = await scraper.run(url);
+      await scraper.close();
 
-      try {
-        const rawData = await scraper.run(url);
-        const normalized = normalizeProfile(url, rawData);
-        results.push(normalized);
-        successCount++;
+      const normalized = normalizeProfile(url, rawData);
+      results.push(normalized);
+      successCount++;
 
-        console.log(`${progress} SUCCESS: ${normalized.full_name || "Unknown"}`);
-        if (normalized.headline) {
-          console.log(`         Headline: ${normalized.headline.substring(0, 60)}...`);
-        }
-      } catch (error) {
-        failCount++;
-        const err = error as Error;
-        const failedProfile = createFailedProfile(url, err);
-        results.push(failedProfile);
-
-        if ((error as any).name === "SessionExpired") {
-          console.error(`${progress} FATAL: Session expired! Please get a new li_at cookie.`);
-          console.error("Saving partial results and exiting...");
-          break;
-        } else {
-          console.error(`${progress} FAILED: ${err.message}`);
-        }
+      console.log(`${progress} SUCCESS: ${normalized.full_name || "Unknown"}`);
+      if (normalized.headline) {
+        console.log(`         Headline: ${normalized.headline.substring(0, 60)}...`);
       }
+    } catch (error) {
+      failCount++;
+      const err = error as Error;
+      const failedProfile = createFailedProfile(url, err);
+      results.push(failedProfile);
 
-      // Add delay between requests to avoid rate limiting (5-10 seconds)
-      if (i < profileUrls.length - 1) {
-        const delay = 5000 + Math.random() * 5000; // 5-10 seconds
-        console.log(`         Waiting ${(delay / 1000).toFixed(1)}s before next request...\n`);
-        await sleep(delay);
+      // Make sure to close the scraper on error
+      try { await scraper.close(); } catch (e) {}
+
+      if ((error as any).name === "SessionExpired") {
+        console.error(`${progress} FATAL: Session expired! Please get a new li_at cookie.`);
+        console.error("Saving partial results and exiting...");
+        break;
+      } else {
+        console.error(`${progress} FAILED: ${err.message}`);
       }
     }
-  } finally {
-    console.log("\n[CLEANUP] Closing browser...");
-    await scraper.close();
+
+    // Add delay between requests to avoid rate limiting (5-10 seconds)
+    if (i < profileUrls.length - 1) {
+      const delay = 5000 + Math.random() * 5000; // 5-10 seconds
+      console.log(`         Waiting ${(delay / 1000).toFixed(1)}s before next request...\n`);
+      await sleep(delay);
+    }
   }
 
   // Save results to JSON file
