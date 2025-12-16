@@ -1,5 +1,6 @@
 import puppeteer, { Page, Browser } from 'puppeteer'
 import treeKill from 'tree-kill';
+import * as proxyChain from 'proxy-chain';
 
 import blockedHostsList from './blocked-hosts';
 
@@ -172,6 +173,8 @@ export class LinkedInProfileScraper {
   }
 
   private browser: Browser | null = null;
+  private proxyAuth: { username: string; password: string } | null = null;
+  private anonymousProxyUrl: string | null = null;
 
   constructor(userDefinedOptions: ScraperUserDefinedOptions) {
     const logSection = 'constructing';
@@ -215,15 +218,29 @@ export class LinkedInProfileScraper {
     try {
       statusLog(logSection, `Launching puppeteer in the ${this.options.headless ? 'background' : 'foreground'}...`)
 
+      // Handle proxy from environment if available using proxy-chain for authentication
+      const upstreamProxy = process.env.HTTPS_PROXY || process.env.https_proxy || process.env.HTTP_PROXY || process.env.http_proxy;
+      let proxyArg: string | null = null;
+
+      if (upstreamProxy) {
+        try {
+          // Create an anonymous local proxy that handles authentication
+          this.anonymousProxyUrl = await proxyChain.anonymizeProxy(upstreamProxy);
+          proxyArg = `--proxy-server=${this.anonymousProxyUrl}`;
+          statusLog('setup', `Using proxy via proxy-chain: ${this.anonymousProxyUrl}`);
+        } catch (e) {
+          statusLog('setup', `Failed to set up proxy: ${e}`);
+        }
+      }
+
       this.browser = await puppeteer.launch({
         headless: this.options.headless ? 'new' : false,
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
         args: [
-          ...(this.options.headless ? ['--single-process'] : ['--start-maximized']),
+          ...(this.options.headless ? [] : ['--start-maximized']),
+          ...(proxyArg ? [proxyArg, '--ignore-certificate-errors', '--ignore-certificate-errors-spki-list'] : []),
           '--no-sandbox',
           '--disable-setuid-sandbox',
-          "--proxy-server='direct://",
-          '--proxy-bypass-list=*',
           '--disable-dev-shm-usage',
           '--disable-accelerated-2d-canvas',
           '--disable-gpu',
@@ -455,6 +472,17 @@ export class LinkedInProfileScraper {
         }
       }
 
+      // Clean up the anonymous proxy if it was created
+      if (this.anonymousProxyUrl) {
+        try {
+          await proxyChain.closeAnonymizedProxy(this.anonymousProxyUrl, true);
+          statusLog(loggerPrefix, 'Closed anonymous proxy');
+          this.anonymousProxyUrl = null;
+        } catch (proxyErr) {
+          statusLog(loggerPrefix, `Failed to close anonymous proxy: ${proxyErr}`);
+        }
+      }
+
       return resolve()
     })
 
@@ -472,15 +500,18 @@ export class LinkedInProfileScraper {
 
     // Go to the login page of LinkedIn
     // If we do not get redirected and stay on /login, we are logged out
-    // If we get redirect to /feed, we are logged in
+    // If we get redirect to /feed or other internal pages, we are logged in
     await page.goto('https://www.linkedin.com/login', {
       waitUntil: 'networkidle2' as const,
       timeout: this.options.timeout
     })
 
     const url = page.url()
+    statusLog(logSection, `Final URL after login page: ${url}`)
 
-    const isLoggedIn = !url.endsWith('/login')
+    // Check if we're logged in - if we're NOT on the login page, we're logged in
+    // Also accept other LinkedIn internal pages as valid logged-in states
+    const isLoggedIn = !url.includes('/login') && !url.includes('/authwall') && !url.includes('/checkpoint')
 
     await page.close();
 
