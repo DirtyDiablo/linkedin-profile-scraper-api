@@ -1,1002 +1,1982 @@
 [
   {
-    "url": "https://www.linkedin.com/in/ceressariceinfosecurtyspecialist",
-    "full_name": "Ceressa Rice",
-    "headline": "Information Security Analyst",
-    "location": "Greater Montgomery",
+    "url": "https://www.linkedin.com/in/jeffrey-bartsch-b482a5b6",
+    "full_name": "Jeffrey Bartsch",
+    "headline": "DCGS-A Operations Manager at General Dynamics Information Technology",
+    "location": "South Korea",
+    "summary": null,
     "current_company": "General Dynamics Information Technology",
-    "current_title": "Senior Information Security Analyst",
-    "current_role_start_date": "2024-02-01T00:00:00+00:00",
+    "current_title": "DCGS-A Operations Manager",
+    "current_role_start_date": "Invalid date",
     "current_role_description_text": null,
     "experience": [
       {
-        "title": "Senior Information Security Analyst",
+        "title": "DCGS-A Operations Manager",
         "company": "General Dynamics Information Technology",
-        "start": "2024-02-01T00:00:00+00:00",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "DCGS-A Operations Manager at General Dynamics Information Technology",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/alfred-boateng-7360741b8",
+    "full_name": "Alfred Boateng",
+    "headline": "GRC Security Analyst /Risk Assessor at General Dynamics IT",
+    "location": "Washington, District of Columbia, United States",
+    "summary": null,
+    "current_company": "General Dynamics IT",
+    "current_title": "GRC Security Analyst Snr",
+    "current_role_start_date": "2021-02-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "GRC Security Analyst Snr",
+        "company": "General Dynamics IT",
+        "start": "2021-02-01T00:00:00+00:00",
         "end": null,
-        "description": null
+        "description": null,
+        "location": null,
+        "employment_type": "Full-time"
       },
       {
-        "title": "Security Control Assessor",
-        "company": "ManTech",
-        "start": "2023-09-01T00:00:00+00:00",
-        "end": "2024-02-01T00:00:00+00:00",
-        "description": null
+        "title": "GRC Analyst/Risk Assessor (VSA)",
+        "company": "NikSoft Systems Corporation",
+        "start": "2019-02-01T00:00:00+00:00",
+        "end": "2020-09-01T00:00:00+00:00",
+        "description": null,
+        "location": "United States",
+        "employment_type": "Full-time"
       },
       {
-        "title": "Chief, Physical Security/Information Assurance Officer",
-        "company": "United States Air Force",
-        "start": "2021-10-01T00:00:00+00:00",
-        "end": "2023-09-01T00:00:00+00:00",
-        "description": null
+        "title": "Compliance Analyst",
+        "company": "Wells Fargo",
+        "start": "2014-02-01T00:00:00+00:00",
+        "end": "2019-03-01T00:00:00+00:00",
+        "description": null,
+        "location": "United States",
+        "employment_type": "Full-time"
+      }
+    ],
+    "education": [
+      {
+        "school": "University of Colorado Denver Business School",
+        "degree": "Master of Science - MS",
+        "field_of_study": "Information Systems Business Intelligence",
+        "start": "Invalid date",
+        "end": "Invalid date"
       },
       {
-        "title": "Information System Security Officer/PSR II",
-        "company": "AJA Inc.",
-        "start": "2019-10-01T00:00:00+00:00",
-        "end": "2021-10-01T00:00:00+00:00",
-        "description": null
+        "school": "University of Colorado",
+        "degree": "Master of Science - MS",
+        "field_of_study": "Information Systems Business Intelligence",
+        "start": "Invalid date",
+        "end": "Invalid date"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [
+      {
+        "name": "CompTIA Advanced Security Practitioner (CASP)",
+        "authority": "CompTIA",
+        "issue_date": "Oct 2023",
+        "expiration_date": "Oct 2026",
+        "url": null
+      },
+      {
+        "name": "CERT Resilience Management Model - RMM",
+        "authority": "Software Engineering Institute | Carnegie Mellon University",
+        "issue_date": "Sep 2019",
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [
+      {
+        "text": "Art...Artificial intelligence is a brush that paints the canvas of endless possibilities.It is the catalyst that propels us toward a future of boundless innovation.The true power of AI lies not in replacing humans, but in augmenting their capabilities.What are your thoughts, Champions?Please share and comment below.hashtag#ai hashtag#transformation hashtag#leadership hashtag#art hashtag#innovation",
+        "date": null,
+        "likes": 18,
+        "comments": 446,
+        "url": null
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "GRC Security Analyst /Risk Assessor at General Dynamics IT | Previously: GRC Analyst/Risk Assessor (VSA) at NikSoft Systems Corporation; Compliance Analyst at Wells Fargo",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/ACwAABF35jABbxriFlPzSE8TcrzG8UKXcX_rEFc",
+    "full_name": "Christine Carpenter",
+    "headline": "Tier II Network Operations Manager at CSRA",
+    "location": "Olivehurst, California, United States",
+    "summary": null,
+    "current_company": "CSRA Inc",
+    "current_title": "DCGS Network Manager, Network Engineer 2",
+    "current_role_start_date": "2014-04-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "DCGS Network Manager, Network Engineer 2",
+        "company": "CSRA Inc",
+        "start": "2014-04-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Network Monitor",
+        "company": "General Dynamics Advanced Information Systems",
+        "start": "2012-09-01T00:00:00+00:00",
+        "end": "2014-04-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Network Maintenance Technician",
+        "company": "California Air National Guard",
+        "start": "2012-08-01T00:00:00+00:00",
+        "end": "2013-04-01T00:00:00+00:00",
+        "description": null,
+        "location": "Yuba City, California",
+        "employment_type": null
       },
       {
         "title": "United States Air Force",
-        "company": "7 yrs 4 mos",
-        "start": "2015-09-01T00:00:00+00:00",
-        "end": "2019-11-01T00:00:00+00:00",
-        "description": null
+        "company": "7 yrs 3 mos",
+        "start": "2010-08-01T00:00:00+00:00",
+        "end": "2012-08-01T00:00:00+00:00",
+        "description": null,
+        "location": "Yuba City, California",
+        "employment_type": null
       }
     ],
-    "skills": [
-      "Database Management System (DBMS)",
-      "User Experience (UX)"
+    "education": [
+      {
+        "school": "Full Sail University",
+        "degree": "Bachelor of Fine Arts (BFA)",
+        "field_of_study": "Creative Writing for Entertainment",
+        "start": "2012-01-01T00:00:00+00:00",
+        "end": "2015-01-01T00:00:00+00:00"
+      },
+      {
+        "school": "Community College of the Air Force",
+        "degree": "Associate of Science (AS)",
+        "field_of_study": "Electronic Systems Technology",
+        "start": "2005-01-01T00:00:00+00:00",
+        "end": "2008-01-01T00:00:00+00:00"
+      }
     ],
-    "evidence_text": "Information Security Analyst | Previously: Security Control Assessor at ManTech; Chief, Physical Security/Information Assurance Officer at United States Air Force | Skills: Database Management System (DBMS), User Experience (UX)",
+    "volunteer_experience": [],
+    "skills": [
+      "Technical Support",
+      "Switches"
+    ],
+    "languages": [],
+    "certifications": [
+      {
+        "name": "CCNA",
+        "authority": "Cisco",
+        "issue_date": "Apr 2014",
+        "expiration_date": null,
+        "url": null
+      },
+      {
+        "name": "CCENT",
+        "authority": "Cisco",
+        "issue_date": "Mar 2014",
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [
+      {
+        "type": "publication",
+        "title": "Starving Artist",
+        "description": null,
+        "date": null,
+        "issuer": "Elbow Pads Volume III, Issue I · Oct 1, 2013"
+      }
+    ],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Tier II Network Operations Manager at CSRA | Previously: Network Monitor at General Dynamics Advanced Information Systems; Network Maintenance Technician at California Air National Guard | Skills: Technical Support, Switches",
     "scrape_status": "success"
   },
   {
-    "url": "https://www.linkedin.com/in/ACwAADKtvoMB6qUK7oEX-kzosgNwrEcO2r26Ptc",
-    "full_name": "Kwame A.",
-    "headline": "Master of Science in Cybersecurity and Information Assurance",
-    "location": "United States",
-    "current_company": "General Dynamics Mission Systems",
-    "current_title": "Information Assurance Professional",
-    "current_role_start_date": "2024-09-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Information Assurance Professional",
-        "company": "General Dynamics Mission Systems",
-        "start": "2024-09-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Information System Security Manager",
-        "company": "Life Cycle Engineering",
-        "start": "2020-06-01T00:00:00+00:00",
-        "end": "2024-09-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Risk Management Framework (RMF)",
-      "NIST 800-53"
-    ],
-    "evidence_text": "Master of Science in Cybersecurity and Information Assurance | Previously: Information System Security Manager at Life Cycle Engineering | Skills: Risk Management Framework (RMF), NIST 800-53",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/somewidget",
-    "full_name": "Timmy Aaron",
-    "headline": "Configuration Analyst Advisor",
-    "location": "Rocklin, California, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "Configuration Analyst Advisor",
-    "current_role_start_date": "2025-01-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Configuration Analyst Advisor",
-        "company": "General Dynamics Information Technology",
-        "start": "2025-01-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Information Technology Site Lead",
-        "company": "United States Air Force",
-        "start": "2022-06-01T00:00:00+00:00",
-        "end": "2024-12-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Network Program Manager",
-        "company": "ZENITH ADVANCED SOLUTIONS",
-        "start": "2018-05-01T00:00:00+00:00",
-        "end": "2022-05-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Graphic Production Artist",
-        "company": "Ibalz Marketing",
-        "start": "2014-09-01T00:00:00+00:00",
-        "end": "2018-05-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Graphic Designer",
-        "company": "78 FSS Marketing",
-        "start": "2013-04-01T00:00:00+00:00",
-        "end": "2014-09-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "System Administration",
-      "Scripting"
-    ],
-    "evidence_text": "Configuration Analyst Advisor | Previously: Information Technology Site Lead at United States Air Force; Network Program Manager at ZENITH ADVANCED SOLUTIONS | Skills: System Administration, Scripting",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/matt-abazia-756b3681",
-    "full_name": "Matt Abazia",
-    "headline": "Information Systems Security Manager",
-    "location": "Honolulu, Hawaii, United States",
-    "current_company": "General Dynamics Mission Systems",
-    "current_title": "Information Systems Security Manager",
-    "current_role_start_date": "2023-01-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Information Systems Security Manager",
-        "company": "General Dynamics Mission Systems",
-        "start": "2023-01-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Supervisory Security Specialist",
-        "company": "UNITED STATES DEPARTMENT OF THE NAVY",
-        "start": "2018-03-01T00:00:00+00:00",
-        "end": "2022-08-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Deputy Director Of Operations",
-        "company": "Department Of Navy",
-        "start": "2016-10-01T00:00:00+00:00",
-        "end": "2017-10-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Security Asset Manager",
-        "company": "DP&R",
-        "start": "2015-10-01T00:00:00+00:00",
-        "end": "2016-09-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Battle Watch Analyst",
-        "company": "Native Hawaiian Veterans",
-        "start": "2014-11-01T00:00:00+00:00",
-        "end": "2015-10-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Command",
-      "Military Operations"
-    ],
-    "evidence_text": "Information Systems Security Manager | Previously: Supervisory Security Specialist at UNITED STATES DEPARTMENT OF THE NAVY; Deputy Director Of Operations at Department Of Navy | Skills: Command, Military Operations",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/erin-abbott-417573123",
+    "url": "https://www.linkedin.com/in/ccollins231",
     "full_name": null,
     "headline": null,
     "location": null,
+    "summary": null,
     "current_company": null,
     "current_title": null,
     "current_role_start_date": null,
     "current_role_description_text": null,
     "experience": [],
+    "education": [],
+    "volunteer_experience": [],
     "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
     "evidence_text": "",
     "scrape_status": "success"
   },
   {
-    "url": "https://www.linkedin.com/in/luther-luke-abernathy-76aab013",
-    "full_name": "Luther (Luke) Abernathy",
-    "headline": "Program Manager - GDIT",
-    "location": "Montgomery, Alabama, United States",
-    "current_company": "GDIT",
-    "current_title": "Program Manager",
-    "current_role_start_date": "2007-06-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Program Manager",
-        "company": "GDIT",
-        "start": "2007-06-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Program Manager",
-        "company": "BAE Systems",
-        "start": "2000-02-01T00:00:00+00:00",
-        "end": "2007-06-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Program Management",
-      "Requirements Analysis"
-    ],
-    "evidence_text": "Program Manager - GDIT | Previously: Program Manager at BAE Systems | Skills: Program Management, Requirements Analysis",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/osama-abuzeineh-4386b384",
-    "full_name": "Osama Abuzeineh",
-    "headline": "Senior Program Manager",
-    "location": "Laurel, Maryland, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "Senior Program Manager",
-    "current_role_start_date": "2023-07-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Senior Program Manager",
-        "company": "General Dynamics Information Technology",
-        "start": "2023-07-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Senior Technology Process Manager",
-        "company": "Capital One",
-        "start": "2021-11-01T00:00:00+00:00",
-        "end": "2023-07-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Accenture Federal Services",
-        "company": "7 yrs 11 mos",
-        "start": "2019-02-01T00:00:00+00:00",
-        "end": "2021-11-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Intern",
-        "company": "Wood Mackenzie",
-        "start": "2013-05-01T00:00:00+00:00",
-        "end": "2013-08-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Intern",
-        "company": "Wood Mackenzie",
-        "start": "2012-05-01T00:00:00+00:00",
-        "end": "2012-08-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Leadership",
-      "Training"
-    ],
-    "evidence_text": "Senior Program Manager | Previously: Senior Technology Process Manager at Capital One; Accenture Federal Services at 7 yrs 11 mos | Skills: Leadership, Training",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/steve-acker-2b5a8510",
-    "full_name": "Steve Acker",
-    "headline": "Senior Space Systems Deployment Mgr. at GDMS, Scottsdale AZ",
-    "location": "Gilbert, Arizona, United States",
-    "current_company": "22 yrs 3 mos",
-    "current_title": "General Dynamics Mission Systems",
-    "current_role_start_date": "2003-10-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "General Dynamics Mission Systems",
-        "company": "22 yrs 3 mos",
-        "start": "2003-10-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Senior Space Systems Deployment Mgr.",
-        "company": "GDMS, Scottsdale AZ",
-        "start": "2003-10-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Senior Staff Engineer",
-        "company": "Motorola",
-        "start": "1984-02-01T00:00:00+00:00",
-        "end": "2003-10-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Embedded Systems",
-      "RTOS"
-    ],
-    "evidence_text": "Senior Space Systems Deployment Mgr. at GDMS, Scottsdale AZ | Previously: Senior Space Systems Deployment Mgr. at GDMS, Scottsdale AZ; Senior Staff Engineer at Motorola | Skills: Embedded Systems, RTOS",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/eduardoacostaclas",
-    "full_name": "Eduardo Acosta, MBA",
-    "headline": "Deputy Sheriff | Detention Services",
-    "location": "Tampa, Florida, United States",
-    "current_company": "Full-time",
-    "current_title": "Hillsborough County Sheriff's Office",
-    "current_role_start_date": "Invalid date",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Hillsborough County Sheriff's Office",
-        "company": "Full-time",
-        "start": "Invalid date",
-        "end": "Invalid date",
-        "description": null
-      },
-      {
-        "title": "Culinary Specialist 92G",
-        "company": "US Army",
-        "start": "2018-10-01T00:00:00+00:00",
-        "end": "2024-09-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Account Manager",
-        "company": "Sunrise Landscape",
-        "start": "2023-07-01T00:00:00+00:00",
-        "end": "2024-01-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Dispatcher - Driver Manager",
-        "company": "Lightning Transport & Logistics",
-        "start": "2021-06-01T00:00:00+00:00",
-        "end": "2023-07-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Operations Manager",
-        "company": "Quickway Logistics",
-        "start": "2020-11-01T00:00:00+00:00",
-        "end": "2021-06-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Catering",
-      "Cooking"
-    ],
-    "evidence_text": "Deputy Sheriff | Detention Services | Previously: Culinary Specialist 92G at US Army; Account Manager at Sunrise Landscape | Skills: Catering, Cooking",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/raquel-adame-6889975",
-    "full_name": "Raquel Adame",
-    "headline": "Security Manager",
-    "location": "San Diego, California, United States",
-    "current_company": "21 yrs 8 mos",
-    "current_title": "General Dynamics Information Technology",
-    "current_role_start_date": "2021-08-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "General Dynamics Information Technology",
-        "company": "21 yrs 8 mos",
-        "start": "2021-08-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      }
-    ],
-    "skills": [
-      "JPAS",
-      "Personally Identifiable Information (PII)"
-    ],
-    "evidence_text": "Security Manager | Skills: JPAS, Personally Identifiable Information (PII)",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/mario-adamo-ba876b208",
-    "full_name": "Mario Adamo",
-    "headline": "Information System Security Manager at General Dynamics Mission Systems",
-    "location": "Denville, New Jersey, United States",
+    "url": "https://www.linkedin.com/in/maryann-collins-592a3831",
+    "full_name": "MaryAnn Collins",
+    "headline": "Principal Administrator to the Director of Engineering, GDC4S",
+    "location": "Taunton, Massachusetts, United States",
+    "summary": null,
     "current_company": "General Dynamics Mission Systems",
-    "current_title": "Information System Security Manager",
+    "current_title": "Principal Administrator to the Director of Ground Systems Engineering",
     "current_role_start_date": "Invalid date",
     "current_role_description_text": null,
     "experience": [
       {
-        "title": "Information System Security Manager",
+        "title": "Principal Administrator to the Director of Ground Systems Engineering",
         "company": "General Dynamics Mission Systems",
         "start": "Invalid date",
         "end": "Invalid date",
-        "description": null
+        "description": null,
+        "location": "Taunton, Massachusetts",
+        "employment_type": null
       }
     ],
-    "skills": [],
-    "evidence_text": "Information System Security Manager at General Dynamics Mission Systems",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/merchant-adams-6949a91a",
-    "full_name": "Merchant Adams",
-    "headline": "Senior Program Manager at General Dynamics Information Technology",
-    "location": "Norfolk, Virginia, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "Senior Program Manager",
-    "current_role_start_date": "1991-07-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
+    "education": [
       {
-        "title": "Senior Program Manager",
-        "company": "General Dynamics Information Technology",
-        "start": "1991-07-01T00:00:00+00:00",
-        "end": null,
-        "description": null
+        "school": "Quincy Junior College",
+        "degree": "Business Administration",
+        "field_of_study": null,
+        "start": "1985-01-01T00:00:00+00:00",
+        "end": "1986-01-01T00:00:00+00:00"
+      },
+      {
+        "school": "Boston Business",
+        "degree": "Business Administration",
+        "field_of_study": null,
+        "start": "1978-01-01T00:00:00+00:00",
+        "end": "1979-01-01T00:00:00+00:00"
       }
     ],
-    "skills": [],
-    "evidence_text": "Senior Program Manager at General Dynamics Information Technology",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/barry-adams-312b0082",
-    "full_name": "Barry Adams",
-    "headline": "Director of Business Development",
-    "location": "Los Angeles Metropolitan",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "Director, Business Development for US Space Force",
-    "current_role_start_date": "2021-09-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Director, Business Development for US Space Force",
-        "company": "General Dynamics Information Technology",
-        "start": "2021-09-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Parsons Corporation",
-        "company": "11 yrs 8 mos",
-        "start": "2020-12-01T00:00:00+00:00",
-        "end": "2021-09-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Program Manager, Technology Development Division",
-        "company": "Northrop Grumman Corporation",
-        "start": "2006-08-01T00:00:00+00:00",
-        "end": "2010-02-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "United States Air Force",
-        "company": "10 yrs 2 mos",
-        "start": "Invalid date",
-        "end": "Invalid date",
-        "description": null
-      }
-    ],
+    "volunteer_experience": [],
     "skills": [
-      "Earned Value Management",
-      "Program Management"
+      "Microsoft Office",
+      "Notary Public"
     ],
-    "evidence_text": "Director of Business Development | Previously: Parsons Corporation at 11 yrs 8 mos; Program Manager, Technology Development Division at Northrop Grumman Corporation | Skills: Earned Value Management, Program Management",
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Principal Administrator to the Director of Engineering, GDC4S | Skills: Microsoft Office, Notary Public",
     "scrape_status": "success"
   },
   {
-    "url": "https://www.linkedin.com/in/james-agee-jr",
-    "full_name": "James (Mike) Agee, Jr.",
-    "headline": "Information Systems Security Manager | Retired Air Force | 🎓MBA & BSITM | CISSP | CEH | Security+ | TS/SCI",
-    "location": "Omaha, Nebraska, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "Lead Information Systems Security Manager",
+    "url": "https://www.linkedin.com/in/justin-collins-2b73836b",
+    "full_name": "Justin Collins",
+    "headline": "A.I. Capability Tester",
+    "location": "Lancaster, California, United States",
+    "summary": null,
+    "current_company": "Full-time",
+    "current_title": "UnitedHealth Group",
     "current_role_start_date": "2025-11-01T00:00:00+00:00",
     "current_role_description_text": null,
     "experience": [
       {
-        "title": "Lead Information Systems Security Manager",
-        "company": "General Dynamics Information Technology",
+        "title": "UnitedHealth Group",
+        "company": "Full-time",
         "start": "2025-11-01T00:00:00+00:00",
         "end": null,
-        "description": null
+        "description": null,
+        "location": "Lancaster, California, United States",
+        "employment_type": "3 yrs"
       },
       {
-        "title": "Information Systems Security Manager",
-        "company": "Peraton",
-        "start": "2023-01-01T00:00:00+00:00",
-        "end": "2025-11-01T00:00:00+00:00",
-        "description": null
+        "title": "Business Owner",
+        "company": "Self-employed",
+        "start": "2018-09-01T00:00:00+00:00",
+        "end": "2023-01-01T00:00:00+00:00",
+        "description": null,
+        "location": "Accokeek, MD",
+        "employment_type": null
       },
       {
-        "title": "Skillbridge Cyber Internship",
-        "company": "Vets2PM",
-        "start": "2022-07-01T00:00:00+00:00",
-        "end": "2022-09-01T00:00:00+00:00",
-        "description": null
+        "title": "Customer Service Specialist/ Delivery",
+        "company": "Zenleaf",
+        "start": "2018-06-01T00:00:00+00:00",
+        "end": "2019-01-01T00:00:00+00:00",
+        "description": null,
+        "location": "Waldorf, MD",
+        "employment_type": null
       },
       {
-        "title": "United States Air Force",
-        "company": "22 yrs 10 mos",
-        "start": "2021-11-01T00:00:00+00:00",
-        "end": "2022-08-01T00:00:00+00:00",
-        "description": null
+        "title": "Night Auditor",
+        "company": "RGIS",
+        "start": "2016-11-01T00:00:00+00:00",
+        "end": "2018-02-01T00:00:00+00:00",
+        "description": null,
+        "location": "Fairfax,VA",
+        "employment_type": null
+      },
+      {
+        "title": "Lead Cook",
+        "company": "Acme Icehouse",
+        "start": "2016-06-01T00:00:00+00:00",
+        "end": "2016-10-01T00:00:00+00:00",
+        "description": null,
+        "location": "Panama City, Florida",
+        "employment_type": null
       }
     ],
-    "skills": [
-      "NIST 800-53",
-      "Continuous Monitoring"
+    "education": [
+      {
+        "school": "Platt culinary institute",
+        "degree": "Associate of Science (A.S.)",
+        "field_of_study": "Culinary Arts/Chef Training",
+        "start": "2012-01-01T00:00:00+00:00",
+        "end": "2014-01-01T00:00:00+00:00"
+      },
+      {
+        "school": "Embry-Riddle Aeronautical University",
+        "degree": "Bachelor of Business Administration - BBA",
+        "field_of_study": "Logistics, Materials, and Supply Chain Management",
+        "start": "2018-01-01T00:00:00+00:00",
+        "end": "2024-01-01T00:00:00+00:00"
+      }
     ],
-    "evidence_text": "Information Systems Security Manager | Retired Air Force | 🎓MBA & BSITM | CISSP | CEH | Security+ | TS/SCI | Previously: Information Systems Security Manager at Peraton; Skillbridge Cyber Internship at Vets2PM | Skills: NIST 800-53, Continuous Monitoring",
+    "volunteer_experience": [],
+    "skills": [
+      "Customer Experience Design",
+      "Product Operations"
+    ],
+    "languages": [],
+    "certifications": [
+      {
+        "name": "How to Use Generative AI: Building an AI-First Mindset",
+        "authority": "LinkedIn",
+        "issue_date": "Nov 2025",
+        "expiration_date": null,
+        "url": null
+      },
+      {
+        "name": "Introduction to Conversational AI",
+        "authority": "LinkedIn",
+        "issue_date": "Nov 2025",
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [
+      {
+        "text": "Just finished the course “Introduction to Conversational AI”! hashtag#generativeai hashtag#conversationalai",
+        "date": null,
+        "likes": null,
+        "comments": null,
+        "url": null
+      },
+      {
+        "text": "Just finished the course “Irreplaceable: The Art of Standing Out in the Age of AI”! hashtag#personalbranding",
+        "date": null,
+        "likes": null,
+        "comments": null,
+        "url": null
+      },
+      {
+        "text": "Just finished the course “How to Use Generative AI: Building an AI-First Mindset”! hashtag#generativeaitools hashtag#artificialintelligenceforbusiness hashtag#artificialintelligence",
+        "date": null,
+        "likes": null,
+        "comments": null,
+        "url": null
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "A.I. Capability Tester | Previously: Business Owner at Self-employed; Customer Service Specialist/ Delivery at Zenleaf | Skills: Customer Experience Design, Product Operations",
     "scrape_status": "success"
   },
   {
-    "url": "https://www.linkedin.com/in/robert-aiken-75884350",
-    "full_name": "Robert Aiken",
-    "headline": "Material Planner at General Dynamics",
-    "location": "Pooler, Georgia, United States",
-    "current_company": "General Dynamics",
-    "current_title": "Material Planner",
-    "current_role_start_date": "2006-05-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Material Planner",
-        "company": "General Dynamics",
-        "start": "2006-05-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      }
-    ],
-    "skills": [
-      "Management",
-      "Business Planning"
-    ],
-    "evidence_text": "Material Planner at General Dynamics | Skills: Management, Business Planning",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/michael-ajhar-30b0671a",
-    "full_name": "Michael Ajhar",
-    "headline": "System Integrator/Project Manager at General Dynamics Information Technology",
-    "location": "Augusta, Georgia, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "System Integrator/Project Manager",
-    "current_role_start_date": "1999-06-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "System Integrator/Project Manager",
-        "company": "General Dynamics Information Technology",
-        "start": "1999-06-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      }
-    ],
-    "skills": [
-      "Government Contracting",
-      "Information Assurance"
-    ],
-    "evidence_text": "System Integrator/Project Manager at General Dynamics Information Technology | Skills: Government Contracting, Information Assurance",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/nathan-akin-917821131",
-    "full_name": "Nathan Akin",
-    "headline": "National Security Analyst at GDIT",
-    "location": "Arlington, Virginia, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "National Security Analyst",
-    "current_role_start_date": "2024-02-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "National Security Analyst",
-        "company": "General Dynamics Information Technology",
-        "start": "2024-02-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Army C-sUAS Analyst",
-        "company": "KBR, Inc.",
-        "start": "2021-11-01T00:00:00+00:00",
-        "end": "2024-02-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Congressional Research Analyst",
-        "company": "Decision Technologies, Inc.",
-        "start": "2020-09-01T00:00:00+00:00",
-        "end": "2021-11-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Security Administrator III",
-        "company": "McManis & Monsalve Associates",
-        "start": "2019-10-01T00:00:00+00:00",
-        "end": "2020-08-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Graduate Research Assistant",
-        "company": "University of Massachusetts Boston",
-        "start": "2017-09-01T00:00:00+00:00",
-        "end": "2019-05-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Microsoft Office",
-      "Microsoft Excel"
-    ],
-    "evidence_text": "National Security Analyst at GDIT | Previously: Army C-sUAS Analyst at KBR, Inc.; Congressional Research Analyst at Decision Technologies, Inc. | Skills: Microsoft Office, Microsoft Excel",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/oluwatomiyin-akinbo-400589215",
+    "url": "https://www.linkedin.com/in/richard-conner-ab3b9322",
     "full_name": null,
     "headline": null,
     "location": null,
+    "summary": null,
     "current_company": null,
     "current_title": null,
     "current_role_start_date": null,
     "current_role_description_text": null,
     "experience": [],
+    "education": [],
+    "volunteer_experience": [],
     "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
     "evidence_text": "",
-    "scrape_status": "success"
+    "scrape_status": "failed",
+    "error_message": "Runtime.callFunctionOn timed out. Increase the 'protocolTimeout' setting in launch/connect calls for a higher timeout if needed."
   },
   {
-    "url": "https://www.linkedin.com/in/megan-alapati-6878a1203",
-    "full_name": "Megan Alapati",
-    "headline": "pm at gd",
-    "location": "Los Angeles, California, United States",
-    "current_company": "gd",
-    "current_title": "pm",
+    "url": "https://www.linkedin.com/in/carol-conner-9b00954",
+    "full_name": "carol conner",
+    "headline": "Senior Software Quality Engineer",
+    "location": "Mountain View, California, United States",
+    "summary": null,
+    "current_company": "29 yrs",
+    "current_title": "General Dynamics Mission Systems",
     "current_role_start_date": "Invalid date",
     "current_role_description_text": null,
     "experience": [
       {
-        "title": "pm",
-        "company": "gd",
+        "title": "General Dynamics Mission Systems",
+        "company": "29 yrs",
         "start": "Invalid date",
         "end": "Invalid date",
-        "description": null
+        "description": null,
+        "location": "Santa Clara, CA",
+        "employment_type": null
       }
     ],
+    "education": [
+      {
+        "school": "California Polytechnic State University-San Luis Obispo",
+        "degree": "BS",
+        "field_of_study": "Electronic Engineering",
+        "start": "Invalid date",
+        "end": "Invalid date"
+      },
+      {
+        "school": "California Lutheran University, Thousand Oaks, California",
+        "degree": "BS",
+        "field_of_study": "Computer Science",
+        "start": "Invalid date",
+        "end": "Invalid date"
+      }
+    ],
+    "volunteer_experience": [],
     "skills": [],
-    "evidence_text": "pm at gd",
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Senior Software Quality Engineer",
     "scrape_status": "success"
   },
   {
-    "url": "https://www.linkedin.com/in/ricardo-albaladejo-7426297",
-    "full_name": "Ricardo Albaladejo",
-    "headline": "Security Specialist",
-    "location": "Sterling, Virginia, United States",
-    "current_company": "3 yrs 5 mos",
+    "url": "https://www.linkedin.com/in/dave-crawford-756a27b",
+    "full_name": "Dave Crawford",
+    "headline": "Sr Engineer/Program Manager at General Dynamics Information Technology",
+    "location": "Dayton, Ohio, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Sr Engineer/Program Manager",
+    "current_role_start_date": "Invalid date",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Sr Engineer/Program Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Sr Engineer/Program Manager at General Dynamics Information Technology",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/kingsley-ero",
+    "full_name": null,
+    "headline": null,
+    "location": null,
+    "summary": null,
+    "current_company": null,
+    "current_title": null,
+    "current_role_start_date": null,
+    "current_role_description_text": null,
+    "experience": [],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [
+      {
+        "text": "We had such an incredible intern season this summer.  It was amazing to have so many talented, next gen leaders join us -- and given our higher-than-industry-average Intern conversion rates, it's clear that our Interns felt the same about being at hashtag#GDIT!As we enter Fall, it's time to open the doors for our 2026 Intern class!  If you or any of your friends and family are interested, please visit our early career (or career transition) and Interns page on our career site.https://lnkd.in/eB_Gdfps",
+        "date": null,
+        "likes": 127,
+        "comments": 3,
+        "url": null
+      },
+      {
+        "text": "Congratulations to GDIT President & CEO, Amy Gilliland, for her recognition as a 2025 hashtag#FedScoop50 Industry Leadership Award Winner! \"Under Gilliland’s leadership, GDIT has pioneered advancements in artificial intelligence, cybersecurity, and cloud computing, establishing a national network of labs to test and scale emerging technologies. Her visionary leadership continues to shape the landscape of federal technology, driving impactful change across defense, civilian, and intelligence sectors.\" https://lnkd.in/e-b9mSum",
+        "date": null,
+        "likes": 1,
+        "comments": 90,
+        "url": null
+      },
+      {
+        "text": "Hi everyone! I’m seeking a new role and would appreciate your support. If you hear of any opportunities or just want to catch up, please send me a message or comment below. I’d love to reconnect. hashtag#OpenToWorkAbout me & what I’m looking for:💼Currently an Engineering Technician III at General Dynamics Information Technology (GDIT), supporting U.S. defense systems.Former Security Specialist (Apple) and Tier II IT Support (Cherokee Federal).Pursuing a Master’s in Cybersecurity Engineering at the University of San Diego (GPA 3.7).Certified in CompTIA Security+, Cisco CCNA, and PMP.U.S. Citizen | Clearance Eligible🌎 Open to opportunities across the United States (On-site, Hybrid, or Remote).If you hear of any openings or would like to connect, please feel free to message me or tag someone in your network. I’d love to chat!hashtag#OpenToWork hashtag#Cybersecurity hashtag#NetworkEngineer hashtag#ElectricalEngineering hashtag#ITSupport hashtag#ClearanceEligible",
+        "date": null,
+        "likes": 6,
+        "comments": null,
+        "url": null
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/dusty-galbraith-a1332b125",
+    "full_name": "Dusty Galbraith",
+    "headline": "Program Manager at General Dynamics Information Technology",
+    "location": "Norfolk, Virginia, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Program Manager",
+    "current_role_start_date": "Invalid date",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Program Manager at General Dynamics Information Technology",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/david-dusty-galbraith-6b523b61",
+    "full_name": "David (Dusty) Galbraith",
+    "headline": "Program Manager at General Dynamics Information Technology",
+    "location": "Norfolk, Virginia, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Program Manager",
+    "current_role_start_date": "Invalid date",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Program Manager at General Dynamics Information Technology",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/charles-gateley-8a2482105",
+    "full_name": "Charles Gateley",
+    "headline": "Cyber Threat Analyst",
+    "location": "San Diego, California, United States",
+    "summary": null,
+    "current_company": "GDIT",
+    "current_title": "Field Service Technician",
+    "current_role_start_date": "2017-05-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Field Service Technician",
+        "company": "GDIT",
+        "start": "2017-05-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Greater San Diego",
+        "employment_type": null
+      },
+      {
+        "title": "Cyber Threat Analyst",
+        "company": "Department of Defense",
+        "start": "2016-03-01T00:00:00+00:00",
+        "end": "2017-05-01T00:00:00+00:00",
+        "description": null,
+        "location": "San Diego, California",
+        "employment_type": null
+      },
+      {
+        "title": "Sr. Consultant",
+        "company": "Booz Allen Hamilton",
+        "start": "2015-08-01T00:00:00+00:00",
+        "end": "2016-01-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Transportation Coordinator",
+        "company": "Anheuser-Busch",
+        "start": "2000-08-01T00:00:00+00:00",
+        "end": "2005-09-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "Webster University",
+        "degree": "Master's degree",
+        "field_of_study": "Business Administration and Management, General",
+        "start": "2004-01-01T00:00:00+00:00",
+        "end": "2005-01-01T00:00:00+00:00"
+      },
+      {
+        "school": "Maryville University of Saint Louis",
+        "degree": "Bachelor's degree",
+        "field_of_study": "Business, Management, Marketing, and Related Support Services",
+        "start": "1996-01-01T00:00:00+00:00",
+        "end": "1999-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Cyber-security"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": null
+      }
+    ],
+    "certifications": [
+      {
+        "name": "CompTIA Security  ce",
+        "authority": "CompTIA",
+        "issue_date": "Oct 2015",
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Cyber Threat Analyst | Previously: Cyber Threat Analyst at Department of Defense; Sr. Consultant at Booz Allen Hamilton | Skills: Cyber-security",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/bruce-gilbert-ab185314",
+    "full_name": null,
+    "headline": null,
+    "location": null,
+    "summary": null,
+    "current_company": null,
+    "current_title": null,
+    "current_role_start_date": null,
+    "current_role_description_text": null,
+    "experience": [],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/rebecca-gunning-76620510",
+    "full_name": "Rebecca Gunning",
+    "headline": "Sr Program Manager at General Dynamics Information Technology",
+    "location": "Frederick, Maryland, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Program Manager",
+    "current_role_start_date": "2008-12-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "2008-12-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Maryland, United States",
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "Project Director",
+        "company": "Educational Services, Inc",
+        "start": "2002-10-01T00:00:00+00:00",
+        "end": "2008-12-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Research Analyst",
+        "company": "Northrop Grumman Corporation",
+        "start": "2000-09-01T00:00:00+00:00",
+        "end": "2002-10-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "St. Mary's College of Maryland",
+        "degree": "BA",
+        "field_of_study": "Sociology/Anthropology",
+        "start": "1996-01-01T00:00:00+00:00",
+        "end": "2000-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Operational Planning",
+      "Program Management Professional"
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "proficiency": null
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Project Management Professional (PMP)",
+        "authority": "Project Management Institute",
+        "issue_date": "Nov 2020",
+        "expiration_date": "Nov 2026",
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [
+      {
+        "text": "Come join our team!",
+        "date": null,
+        "likes": null,
+        "comments": null,
+        "url": "/feed/update/urn:li:activity:6519682665841512448/"
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "Sr Program Manager at General Dynamics Information Technology | Previously: Project Director at Educational Services, Inc; Research Analyst at Northrop Grumman Corporation | Skills: Operational Planning, Program Management Professional",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/james-kosior-7aa5039b",
+    "full_name": "James Kosior",
+    "headline": "at",
+    "location": "East Greenbush, New York, United States",
+    "summary": null,
+    "current_company": "CSRA Inc",
+    "current_title": "Sr Distribution Supervisor",
+    "current_role_start_date": "2000-05-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Sr Distribution Supervisor",
+        "company": "CSRA Inc",
+        "start": "2000-05-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Distribution Clerk",
+        "company": "CSC",
+        "start": "1988-10-01T00:00:00+00:00",
+        "end": "2000-05-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "at | Previously: Distribution Clerk at CSC",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/craig-lindahl-52165a9",
+    "full_name": "Craig Lindahl",
+    "headline": "Senior Program Manager at General Dynamics Information Technology",
+    "location": "Dayton, Ohio, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Senior Program Manager",
+    "current_role_start_date": "Invalid date",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Senior Program Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [
+      "Program Management",
+      "PMO"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Senior Program Manager at General Dynamics Information Technology | Skills: Program Management, PMO",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/angelica-madrid-198245278",
+    "full_name": "Angelica Madrid",
+    "headline": "Contract Field Specialist (CFS)",
+    "location": "San Diego, California, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Contract Field Specialist/Program Analyst",
+    "current_role_start_date": "2023-11-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Contract Field Specialist/Program Analyst",
+        "company": "General Dynamics Information Technology",
+        "start": "2023-11-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "Southwest Key Programs",
+        "company": "Full-time",
+        "start": "2019-04-01T00:00:00+00:00",
+        "end": "2024-01-01T00:00:00+00:00",
+        "description": null,
+        "location": "Tucson, Arizona, United States · On-site",
+        "employment_type": "7 yrs 5 mos"
+      },
+      {
+        "title": "Assistant and Translator",
+        "company": "University of Arizona",
+        "start": "2015-08-01T00:00:00+00:00",
+        "end": "2016-05-01T00:00:00+00:00",
+        "description": null,
+        "location": "Tucson, Arizona, United States · On-site",
+        "employment_type": "Part-time"
+      },
+      {
+        "title": "Intern (Case Management)",
+        "company": "International Rescue Committee",
+        "start": "2015-08-01T00:00:00+00:00",
+        "end": "2015-12-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": "Internship"
+      },
+      {
+        "title": "Office Assistant",
+        "company": "University of Arizona",
+        "start": "2012-03-01T00:00:00+00:00",
+        "end": "2013-03-01T00:00:00+00:00",
+        "description": null,
+        "location": "Tucson, Arizona, United States · On-site",
+        "employment_type": "Part-time"
+      }
+    ],
+    "education": [
+      {
+        "school": "University of Arizona",
+        "degree": "Bachelor's degree",
+        "field_of_study": "Global Health and Development, Emphasis in Latin America",
+        "start": "Invalid date",
+        "end": "Invalid date"
+      },
+      {
+        "school": "Rio Rico High School",
+        "degree": "CNA Certification",
+        "field_of_study": null,
+        "start": "Invalid date",
+        "end": "Invalid date"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Certified Nursing Assistant (CNA)",
+      "Home Visits"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Contract Field Specialist (CFS) | Previously: Southwest Key Programs at Full-time; Assistant and Translator at University of Arizona | Skills: Certified Nursing Assistant (CNA), Home Visits",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/jeff-m-menard-mba",
+    "full_name": "Jeff Menard, MBA",
+    "headline": "ISR Systems Architect and Deputy Program Manager at CSRA Inc",
+    "location": "Arlington, Virginia, United States",
+    "summary": null,
+    "current_company": "CSRA Inc",
+    "current_title": "ISR Systems Architect and Deputy Program Manager",
+    "current_role_start_date": "2018-05-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "ISR Systems Architect and Deputy Program Manager",
+        "company": "CSRA Inc",
+        "start": "2018-05-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Arlington, VA",
+        "employment_type": null
+      },
+      {
+        "title": "Independent Consultant",
+        "company": "at your service",
+        "start": "2016-02-01T00:00:00+00:00",
+        "end": "2018-05-01T00:00:00+00:00",
+        "description": null,
+        "location": "Houston, Texas",
+        "employment_type": null
+      },
+      {
+        "title": "Program Manager, USAF Nuclear Command, Control & Communications",
+        "company": "Miracle Systems, Washington DC",
+        "start": "2016-09-01T00:00:00+00:00",
+        "end": "2017-08-01T00:00:00+00:00",
+        "description": null,
+        "location": "Barksdale AFB, LA",
+        "employment_type": null
+      },
+      {
+        "title": "United States Air Force",
+        "company": "23 yrs 5 mos",
+        "start": "2012-08-01T00:00:00+00:00",
+        "end": "2016-04-01T00:00:00+00:00",
+        "description": null,
+        "location": "Schriever AFB, CO",
+        "employment_type": null
+      },
+      {
+        "title": "Production Manager",
+        "company": "Daimler Chrysler",
+        "start": "2002-12-01T00:00:00+00:00",
+        "end": "2009-12-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "Air University, Air War College",
+        "degree": "Senior Leader Development Education",
+        "field_of_study": "Senior Leadership Development Education",
+        "start": "2014-01-01T00:00:00+00:00",
+        "end": "2015-01-01T00:00:00+00:00"
+      },
+      {
+        "school": "Webster University",
+        "degree": "Master of Business Administration (M.B.A.)",
+        "field_of_study": "Master of Business Administration",
+        "start": "2004-01-01T00:00:00+00:00",
+        "end": "2005-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Strategic Planning",
+      "Integrated Operations"
+    ],
+    "languages": [],
+    "certifications": [
+      {
+        "name": "Six Sigma Green Belt",
+        "authority": "Shainin",
+        "issue_date": null,
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [
+      {
+        "type": "organization",
+        "title": "Association of Old Crows",
+        "description": null,
+        "date": null,
+        "issuer": "Member · Mar 2017 - Present"
+      },
+      {
+        "type": "organization",
+        "title": "IAVA",
+        "description": null,
+        "date": null,
+        "issuer": "Member · Jun 2016 - Present"
+      }
+    ],
+    "recent_posts": [
+      {
+        "text": "21 July 2021 marks the 100th anniversary of Billy Mitchell’s infamous sinking of the battleship Ostfriesland. This dramatic event, in defiance of the Navy’s restriction, proved the value of airpower. This demonstration and the further efforts of Mitchell led to the birth of the Air Force as a Service that could deploy combat effects to any battlefield. I highly recommend reading more on this ardent airpower advocate. Now, I challenge all Space Force professionals to find the newest weapon system that will undeniably put them on par or superior to the other Services delivering combat effects. To quote Mitchell’s Congressional testimony, “It is a very serious question whether airpower is auxiliary to the Army and Navy, or whether armies and navies are not actually auxiliary to airpower.” We must all continue to promote the value of spacepower within our own community, the rest of DOD and the public. It might make your career a bit more difficult, but how cool is it that we’re able to do something today that people will remember a century from now!",
+        "date": null,
+        "likes": 6,
+        "comments": 4,
+        "url": null
+      },
+      {
+        "text": "I'm looking to hire a SIGINT SME with AF DCGS experience willing to work in the Pentagon. Let me know if you know anyone that's leaving the AF or have any leads. The position is with GDIT and it's requisition number RQ91006.",
+        "date": null,
+        "likes": 6,
+        "comments": null,
+        "url": null
+      },
+      {
+        "text": "Does this sound like just the job for you?",
+        "date": null,
+        "likes": null,
+        "comments": null,
+        "url": "/feed/update/urn:li:activity:6518585634821595136/"
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "ISR Systems Architect and Deputy Program Manager at CSRA Inc | Previously: Independent Consultant at at your service; Program Manager, USAF Nuclear Command, Control & Communications at Miracle Systems, Washington DC | Skills: Strategic Planning, Integrated Operations",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/robert-nicholson-4960139",
+    "full_name": null,
+    "headline": null,
+    "location": null,
+    "summary": null,
+    "current_company": null,
+    "current_title": null,
+    "current_role_start_date": null,
+    "current_role_description_text": null,
+    "experience": [],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/ACwAAAKnm_oBu2Kes4LJFQRwG2592i7Iv-Dni9M",
+    "full_name": "Ron Nicholson",
+    "headline": "Program Manager at CSRA",
+    "location": "Albany, Missouri, United States",
+    "summary": null,
+    "current_company": "CSRA Inc",
+    "current_title": "Program Sr Manager",
+    "current_role_start_date": "2016-08-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program Sr Manager",
+        "company": "CSRA Inc",
+        "start": "2016-08-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Kansas City, Missouri",
+        "employment_type": null
+      },
+      {
+        "title": "Director Program/Project Managment",
+        "company": "SRA International",
+        "start": "2015-03-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Kansas City, Missouri",
+        "employment_type": null
+      },
+      {
+        "title": "Program Manager",
+        "company": "Unisys",
+        "start": "2000-04-01T00:00:00+00:00",
+        "end": "2013-10-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Project Manager",
+        "company": "ANHEUSER-BUSCH",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Marketing Portfolio Manager / Project Manager",
+        "company": "US SPRINT",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": "Overland Park, KS",
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "Northwest Missouri State University",
+        "degree": "1974 - 1975",
+        "field_of_study": null,
+        "start": "1974-01-01T00:00:00+00:00",
+        "end": "1975-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "IT Strategy",
+      "Program Management"
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native or bilingual proficiency"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Project Managment Professional (PMP)",
+        "authority": "Project Managment Institute",
+        "issue_date": "Sep 2005",
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [
+      {
+        "type": "course",
+        "title": "Project Risk Management",
+        "description": null,
+        "date": null,
+        "issuer": null
+      }
+    ],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Program Manager at CSRA | Previously: Director Program/Project Managment at SRA International; Program Manager at Unisys | Skills: IT Strategy, Program Management",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/jeffrey-schaf-967a9374",
+    "full_name": "Jeffrey Schaf",
+    "headline": "Senior Principal Analyst, Operations - Site Lead at General Dynamics Information Technology",
+    "location": "Tracy, California, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Senior Principal Analyst, Operations - Site Lead",
+    "current_role_start_date": "Invalid date",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Senior Principal Analyst, Operations - Site Lead",
+        "company": "General Dynamics Information Technology",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Senior Principal Analyst, Operations - Site Lead at General Dynamics Information Technology",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/tiffany-shamaly-5a219758",
+    "full_name": "Tiffany Shamaly",
+    "headline": "Subcontracts Manager at General Dynamics Information Technology",
+    "location": "Virginia Beach, Virginia, United States",
+    "summary": null,
+    "current_company": "25 yrs 3 mos",
     "current_title": "General Dynamics Information Technology",
-    "current_role_start_date": "2022-12-01T00:00:00+00:00",
+    "current_role_start_date": "2022-10-01T00:00:00+00:00",
     "current_role_description_text": null,
     "experience": [
       {
         "title": "General Dynamics Information Technology",
-        "company": "3 yrs 5 mos",
-        "start": "2022-12-01T00:00:00+00:00",
+        "company": "25 yrs 3 mos",
+        "start": "2022-10-01T00:00:00+00:00",
         "end": null,
-        "description": null
+        "description": null,
+        "location": "Chantilly, VA",
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "University of Virginia",
+        "degree": "Masters Certificate",
+        "field_of_study": "Contract Management",
+        "start": "Invalid date",
+        "end": "Invalid date"
       },
       {
-        "title": "Evolver",
+        "school": "Lesley University",
+        "degree": "Bachelor's degree",
+        "field_of_study": "Business, Management, Marketing, and Related Support Services",
+        "start": "2001-01-01T00:00:00+00:00",
+        "end": "2004-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Employee Training",
+      "FAR"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [
+      {
+        "text": "Proud to be a graduate from UVA.",
+        "date": null,
+        "likes": 59,
+        "comments": 13,
+        "url": null
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "Subcontracts Manager at General Dynamics Information Technology | Skills: Employee Training, FAR",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/maureen-shamaly",
+    "full_name": "Maureen Shamaly",
+    "headline": "Project Manager",
+    "location": "Hampton Roads, Virginia Metropolitan",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "D. Program Manager",
+    "current_role_start_date": "2021-09-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "D. Program Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "2021-09-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "General Dynamics Information Technology",
         "company": "Full-time",
-        "start": "2021-01-01T00:00:00+00:00",
-        "end": "2022-09-01T00:00:00+00:00",
-        "description": null
+        "start": "2020-05-01T00:00:00+00:00",
+        "end": "2021-06-01T00:00:00+00:00",
+        "description": null,
+        "location": "Virginia Beach, Virginia",
+        "employment_type": "21 yrs 3 mos"
+      }
+    ],
+    "education": [
+      {
+        "school": "Lesley University",
+        "degree": "Bachelor's Degree",
+        "field_of_study": "Business Administration and Management, General",
+        "start": "2001-01-01T00:00:00+00:00",
+        "end": "2003-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Defense",
+      "Teamwork"
+    ],
+    "languages": [],
+    "certifications": [
+      {
+        "name": "Agile Project Leadership",
+        "authority": "LinkedIn",
+        "issue_date": "Sep 2021",
+        "expiration_date": null,
+        "url": null
       },
       {
-        "title": "Security Operations Technician III",
-        "company": "CenturyLink",
-        "start": "2016-04-01T00:00:00+00:00",
-        "end": "2020-07-01T00:00:00+00:00",
-        "description": null
+        "name": "SAP ERP Essential Training",
+        "authority": "LinkedIn",
+        "issue_date": "Sep 2021",
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Project Manager | Previously: General Dynamics Information Technology at Full-time | Skills: Defense, Teamwork",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/tara-stephenson-39912555",
+    "full_name": null,
+    "headline": null,
+    "location": null,
+    "summary": null,
+    "current_company": null,
+    "current_title": null,
+    "current_role_start_date": null,
+    "current_role_description_text": null,
+    "experience": [],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/brian-wilson-1868b69",
+    "full_name": "Brian Wilson",
+    "headline": "Cybersecurity",
+    "location": "Ottawa, Ontario, Canada",
+    "summary": null,
+    "current_company": "Carleton University",
+    "current_title": "Information Security Manager",
+    "current_role_start_date": "2025-01-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Information Security Manager",
+        "company": "Carleton University",
+        "start": "2025-01-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Ottawa, Ontario, Canada · Hybrid",
+        "employment_type": "Permanent Full-time"
       },
       {
-        "title": "Security Operations Technician II",
-        "company": "Zachary Piper Solutions",
-        "start": "2015-09-01T00:00:00+00:00",
-        "end": "2016-04-01T00:00:00+00:00",
-        "description": null
+        "title": "Director, Security",
+        "company": "Canada Mortgage and Housing Corporation (CMHC) Société canadienne d'hypothèques et de logement(SCHL)",
+        "start": "2022-04-01T00:00:00+00:00",
+        "end": "2024-12-01T00:00:00+00:00",
+        "description": null,
+        "location": "Ottawa, Ontario, Canada",
+        "employment_type": "Permanent Full-time"
+      },
+      {
+        "title": "Director, Cybersecurity and Compliance",
+        "company": "Telesat",
+        "start": "2021-11-01T00:00:00+00:00",
+        "end": "2022-04-01T00:00:00+00:00",
+        "description": null,
+        "location": "Ottawa, Ontario, Canada",
+        "employment_type": "Permanent Full-time"
+      },
+      {
+        "title": "CISO/DRO",
+        "company": "City of Ottawa",
+        "start": "2020-03-01T00:00:00+00:00",
+        "end": "2021-11-01T00:00:00+00:00",
+        "description": null,
+        "location": "Ottawa, ON, Canada",
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "Director, IT Security/ CSO",
+        "company": "Canada Mortgage & Housing Corporation",
+        "start": "2017-03-01T00:00:00+00:00",
+        "end": "2020-03-01T00:00:00+00:00",
+        "description": null,
+        "location": "Ottawa, Canada",
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "Algonquin College of Applied Arts and Technology",
+        "degree": "Certificate",
+        "field_of_study": "Cisco Networking Administration",
+        "start": "2004-01-01T00:00:00+00:00",
+        "end": "2004-01-01T00:00:00+00:00"
+      },
+      {
+        "school": "Algonquin College of Applied Arts and Technology",
+        "degree": "Information Systems Security",
+        "field_of_study": null,
+        "start": "1998-01-01T00:00:00+00:00",
+        "end": "1999-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Information Security Management",
+      "ITIL"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [
+      {
+        "text": "I’m happy to share that I’m starting a new position as Information Security Manager at Carleton University!",
+        "date": null,
+        "likes": 157,
+        "comments": 84,
+        "url": null
+      },
+      {
+        "text": "🚀 Record-Breaking hashtag#CFP Submissions! 🚀The Call for Papers is now officially closed, and we are thrilled to announce that we’ve received a record-breaking number of submissions for hashtag#BSidesOttawa2024! From first-time speakers to seasoned professionals, the talent this year is truly exceptional.🎤 Stay tuned as we will announce our finalists on Friday, October 18th!Early Bird tickets are almost sold out – don’t miss your chance to be part of this incredible event. Hurry and register today!🔗 https://lnkd.in/e9EqRXdRhashtag#CyberSecurity hashtag#Ottawa hashtag#CallForSpeakers hashtag#EarlyBirdTickets",
+        "date": null,
+        "likes": 40,
+        "comments": 1,
+        "url": null
+      },
+      {
+        "text": "The comprehensive 18-city 2024 Housing Market Outlook report is now available online. Download it today to see what’s forecasted in your area from 2024-2026. 🔗 https://ow.ly/PqfT50Rswl9 // Voici notre rapport Perspectives du marché de l’habitation pour 18 villes.Téléchargez le rapport complet pour connaître les prévisions dans votre région pour 2024-2026.🔗 https://ow.ly/L2b450Rswlahashtag#HousingInsights hashtag#HousingAffordability hashtag#HousingMarket hashtag#HousingSupply",
+        "date": null,
+        "likes": 89,
+        "comments": null,
+        "url": null
+      }
+    ],
+    "recent_comments": [],
+    "evidence_text": "Cybersecurity | Previously: Director, Security at Canada Mortgage and Housing Corporation (CMHC) Société canadienne d'hypothèques et de logement(SCHL); Director, Cybersecurity and Compliance at Telesat | Skills: Information Security Management, ITIL",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/delda-wilson-34409778",
+    "full_name": "Delda Wilson",
+    "headline": "Program Manager at General Dynamics",
+    "location": "Augusta, Georgia, United States",
+    "summary": null,
+    "current_company": "General Dynamics",
+    "current_title": "Program Manager",
+    "current_role_start_date": "1995-04-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program Manager",
+        "company": "General Dynamics",
+        "start": "1995-04-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Augusta, Georgia",
+        "employment_type": null
+      },
+      {
+        "title": "Program Manager LWNS",
+        "company": "General Dynamics Mission Systems",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": "Fort Gordon, GA",
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "Bernau University",
+        "degree": "Master of Business Administration (MBA)",
+        "field_of_study": null,
+        "start": "1994-01-01T00:00:00+00:00",
+        "end": "1996-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Earned Value Management",
+      "DoD"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Program Manager at General Dynamics | Previously: Program Manager LWNS at General Dynamics Mission Systems | Skills: Earned Value Management, DoD",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/gerald-wilson-2a8216bb",
+    "full_name": "Gerald Wilson",
+    "headline": "Program Manager",
+    "location": "Washington DC-Baltimore",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Program Manager/Functional Analyst Consultant",
+    "current_role_start_date": "2022-05-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program Manager/Functional Analyst Consultant",
+        "company": "General Dynamics Information Technology",
+        "start": "2022-05-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "Medicaid Program Integrity Principal",
+        "company": "MITRE",
+        "start": "2021-11-01T00:00:00+00:00",
+        "end": "2022-05-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "Director, Division of Program Integrity",
+        "company": "District of Columbia Department of Health Care Finance",
+        "start": "2016-02-01T00:00:00+00:00",
+        "end": "2021-12-01T00:00:00+00:00",
+        "description": null,
+        "location": "Washington D.C. Metro",
+        "employment_type": null
+      },
+      {
+        "title": "Federal Bureau of Investigation (FBI)",
+        "company": "20 yrs 2 mos",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": "Washington D.C. Metro",
+        "employment_type": null
+      },
+      {
+        "title": "Officer",
+        "company": "U.S. Coast Guard",
+        "start": "Invalid date",
+        "end": "Invalid date",
+        "description": null,
+        "location": "VARIOUS",
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "US Coast Guard Academy",
+        "degree": "Bachelor of Science (BS)",
+        "field_of_study": "Civil Engineering",
+        "start": "1981-01-01T00:00:00+00:00",
+        "end": "1985-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Team Leadership",
+      "Investigation"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Program Manager | Previously: Medicaid Program Integrity Principal at MITRE; Director, Division of Program Integrity at District of Columbia Department of Health Care Finance | Skills: Team Leadership, Investigation",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/rodney-wilson-89536510",
+    "full_name": "Rodney Wilson",
+    "headline": "Network Administrator at General Dynamics Information Technology",
+    "location": "Hephzibah, Georgia, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Network Administrator",
+    "current_role_start_date": "2014-09-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Network Administrator",
+        "company": "General Dynamics Information Technology",
+        "start": "2014-09-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": null
       },
       {
         "title": "Network Engineer",
-        "company": "Ventech Solutions",
-        "start": "2015-06-01T00:00:00+00:00",
-        "end": "2015-09-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Switches",
-      "Routers"
-    ],
-    "evidence_text": "Security Specialist | Previously: Evolver at Full-time; Security Operations Technician III at CenturyLink | Skills: Switches, Routers",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/rashaun-albert-66403265",
-    "full_name": null,
-    "headline": null,
-    "location": null,
-    "current_company": null,
-    "current_title": null,
-    "current_role_start_date": null,
-    "current_role_description_text": null,
-    "experience": [],
-    "skills": [],
-    "evidence_text": "",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/paul-albert-9248604b",
-    "full_name": "Paul Albert",
-    "headline": "Material Manager at General Dynamics Information Technology",
-    "location": "Chula Vista, California, United States",
-    "current_company": "General Dynamics Information Technology",
-    "current_title": "Material Manager",
-    "current_role_start_date": "Invalid date",
-    "current_role_description_text": null,
-    "experience": [
+        "company": "SAIC",
+        "start": "2008-07-01T00:00:00+00:00",
+        "end": "2014-09-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
       {
-        "title": "Material Manager",
+        "title": "Hardware/VTC tech",
         "company": "General Dynamics Information Technology",
-        "start": "Invalid date",
-        "end": "Invalid date",
-        "description": null
+        "start": "2004-08-01T00:00:00+00:00",
+        "end": "2008-01-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "US Army",
+        "company": "513th MI BDE",
+        "start": "2001-05-01T00:00:00+00:00",
+        "end": "2004-07-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
       }
     ],
-    "skills": [
-      "Microsoft Office",
-      "Customer Service"
+    "education": [
+      {
+        "school": "Thomas Nelson Community College",
+        "degree": null,
+        "field_of_study": null,
+        "start": "Invalid date",
+        "end": "Invalid date"
+      },
+      {
+        "school": "Troy University",
+        "degree": "Bachelor of Applied Computer Science",
+        "field_of_study": null,
+        "start": "Invalid date",
+        "end": "Invalid date"
+      }
     ],
-    "evidence_text": "Material Manager at General Dynamics Information Technology | Skills: Microsoft Office, Customer Service",
+    "volunteer_experience": [],
+    "skills": [
+      "Network Security",
+      "Active Directory"
+    ],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Network Administrator at General Dynamics Information Technology | Previously: Network Engineer at SAIC; Hardware/VTC tech at General Dynamics Information Technology | Skills: Network Security, Active Directory",
     "scrape_status": "success"
   },
   {
-    "url": "https://www.linkedin.com/in/tomasito-alcantar-8b426320",
-    "full_name": null,
-    "headline": null,
-    "location": null,
-    "current_company": null,
-    "current_title": null,
-    "current_role_start_date": null,
-    "current_role_description_text": null,
-    "experience": [],
-    "skills": [],
-    "evidence_text": "",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/joshua-alers-varela-538599244",
-    "full_name": "Joshua Alers-Varela",
-    "headline": "SECRET CLEARANCE | TS ELIGIBLE | CYBER SECURITY | A+ | NET+ | SEC+ | CYSA+ | SPLUNK | AIR FORCE VET",
-    "location": "Toano, Virginia, United States",
+    "url": "https://www.linkedin.com/in/tanner-wilson-170216113",
+    "full_name": "Tanner Wilson",
+    "headline": "Network Administrator-Senior",
+    "location": "United States",
+    "summary": null,
     "current_company": "General Dynamics Information Technology",
-    "current_title": "Information Security Analyst",
-    "current_role_start_date": "2024-09-01T00:00:00+00:00",
+    "current_title": "Information Technology Administrator",
+    "current_role_start_date": "2022-11-01T00:00:00+00:00",
     "current_role_description_text": null,
     "experience": [
       {
-        "title": "Information Security Analyst",
+        "title": "Information Technology Administrator",
         "company": "General Dynamics Information Technology",
-        "start": "2024-09-01T00:00:00+00:00",
+        "start": "2022-11-01T00:00:00+00:00",
         "end": null,
-        "description": null
+        "description": null,
+        "location": "Bayview, Idaho, United States",
+        "employment_type": "Full-time"
       },
       {
-        "title": "Real Estate Agent",
-        "company": "Realty ONE Group",
-        "start": "2022-05-01T00:00:00+00:00",
-        "end": null,
-        "description": null
+        "title": "Information Technology Specialist",
+        "company": "Servatron, Inc.",
+        "start": "2021-07-01T00:00:00+00:00",
+        "end": "2022-10-01T00:00:00+00:00",
+        "description": null,
+        "location": "Spokane, Washington, United States · On-site",
+        "employment_type": "Full-time"
       },
       {
-        "title": "Computer Desktop Field Technician",
-        "company": "Leidos",
-        "start": "2024-05-01T00:00:00+00:00",
-        "end": "2024-09-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "PC Technician",
-        "company": "Stellar Solutions",
-        "start": "2024-03-01T00:00:00+00:00",
-        "end": "2024-05-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Apex Systems IT Intern",
-        "company": "Vets2PM",
-        "start": "2023-10-01T00:00:00+00:00",
-        "end": "2024-03-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "LRA",
-      "PKI"
-    ],
-    "evidence_text": "SECRET CLEARANCE | TS ELIGIBLE | CYBER SECURITY | A+ | NET+ | SEC+ | CYSA+ | SPLUNK | AIR FORCE VET | Previously: Real Estate Agent at Realty ONE Group; Computer Desktop Field Technician at Leidos | Skills: LRA, PKI",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/fnalexandre",
-    "full_name": null,
-    "headline": null,
-    "location": null,
-    "current_company": null,
-    "current_title": null,
-    "current_role_start_date": null,
-    "current_role_description_text": null,
-    "experience": [],
-    "skills": [],
-    "evidence_text": "",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/brian-allen-b0b896a0",
-    "full_name": "Brian Allen",
-    "headline": "Human Resources Director at Dynamic Systems (DSI) a Quanta Services Company",
-    "location": "Austin, Texas, United States",
-    "current_company": "Dynamic Systems, Inc.",
-    "current_title": "Human Resources Director",
-    "current_role_start_date": "2019-09-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Human Resources Director",
-        "company": "Dynamic Systems, Inc.",
-        "start": "2019-09-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "School Board Member",
-        "company": "Pflugerville ISD",
-        "start": "2019-05-01T00:00:00+00:00",
-        "end": "2023-05-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Supervisor",
-        "company": "Texas Department of Public Safety",
-        "start": "2016-10-01T00:00:00+00:00",
-        "end": "2019-08-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Team Lead",
-        "company": "Texas Health and Human Services Commission",
-        "start": "2015-02-01T00:00:00+00:00",
-        "end": "2016-10-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Human Resources Generalist / Classification & Compensation",
-        "company": "Texas Parks and Wildlife Department",
-        "start": "2013-03-01T00:00:00+00:00",
-        "end": "2015-02-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Human Resources",
-      "Leadership"
-    ],
-    "evidence_text": "Human Resources Director at Dynamic Systems (DSI) a Quanta Services Company | Previously: School Board Member at Pflugerville ISD; Supervisor at Texas Department of Public Safety | Skills: Human Resources, Leadership",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/margarita-alvarez-31a9176a",
-    "full_name": "Margarita Alvarez",
-    "headline": "Sr. Security Specialist / FSO at GDMS",
-    "location": "San Diego, California, United States",
-    "current_company": "General Dynamics Mission Systems",
-    "current_title": "Sr. Security Specialist / FSO",
-    "current_role_start_date": "2023-08-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Sr. Security Specialist / FSO",
-        "company": "General Dynamics Mission Systems",
-        "start": "2023-08-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Titanium Cobra Solutions",
-        "company": "3 yrs 10 mos",
-        "start": "Invalid date",
-        "end": "Invalid date",
-        "description": null
-      },
-      {
-        "title": "CGI",
-        "company": "4 yrs 1 mo",
-        "start": "2018-04-01T00:00:00+00:00",
-        "end": "2019-11-01T00:00:00+00:00",
-        "description": null
-      }
-    ],
-    "skills": [
-      "Program Management",
-      "U.S. Department of Defense"
-    ],
-    "evidence_text": "Sr. Security Specialist / FSO at GDMS | Previously: Titanium Cobra Solutions at 3 yrs 10 mos; CGI at 4 yrs 1 mo | Skills: Program Management, U.S. Department of Defense",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/alkarim-amlani-8701676",
-    "full_name": null,
-    "headline": null,
-    "location": null,
-    "current_company": null,
-    "current_title": null,
-    "current_role_start_date": null,
-    "current_role_description_text": null,
-    "experience": [],
-    "skills": [],
-    "evidence_text": "",
-    "scrape_status": "success"
-  },
-  {
-    "url": "https://www.linkedin.com/in/thomas-amuso-103047139",
-    "full_name": "Thomas Amuso",
-    "headline": "Digital Signal Processing Engineer at General Dynamics Mission Systems",
-    "location": "Manassas, Virginia, United States",
-    "current_company": "General Dynamics Mission Systems",
-    "current_title": "Digital Signal Processing Engineer",
-    "current_role_start_date": "2025-10-01T00:00:00+00:00",
-    "current_role_description_text": null,
-    "experience": [
-      {
-        "title": "Digital Signal Processing Engineer",
-        "company": "General Dynamics Mission Systems",
-        "start": "2025-10-01T00:00:00+00:00",
-        "end": null,
-        "description": null
-      },
-      {
-        "title": "Signal Processing Engineer",
-        "company": "Leidos",
-        "start": "2021-06-01T00:00:00+00:00",
-        "end": "2025-10-01T00:00:00+00:00",
-        "description": null
-      },
-      {
-        "title": "Electrical Engineer",
-        "company": "Centauri",
-        "start": "2020-06-01T00:00:00+00:00",
+        "title": "Support Associate 2",
+        "company": "Amazon",
+        "start": "2021-01-01T00:00:00+00:00",
         "end": "2021-05-01T00:00:00+00:00",
-        "description": null
+        "description": null,
+        "location": null,
+        "employment_type": "Full-time"
+      },
+      {
+        "title": "systems admin",
+        "company": "Gryphon Technologies, LC",
+        "start": "2017-04-01T00:00:00+00:00",
+        "end": "2021-01-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "Communications Specialist",
+        "company": "Marine Corps Recruiting",
+        "start": "2012-04-01T00:00:00+00:00",
+        "end": "2016-04-01T00:00:00+00:00",
+        "description": null,
+        "location": null,
+        "employment_type": null
       }
     ],
+    "education": [],
+    "volunteer_experience": [],
     "skills": [
-      "Signal Processing",
-      "MATLAB"
+      "Cisco Technologies",
+      "Windows"
     ],
-    "evidence_text": "Digital Signal Processing Engineer at General Dynamics Mission Systems | Previously: Signal Processing Engineer at Leidos; Electrical Engineer at Centauri | Skills: Signal Processing, MATLAB",
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": null
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Microsoft Certified Solutions Associate (MCSA)",
+        "authority": "Microsoft",
+        "issue_date": "Sep 2019",
+        "expiration_date": null,
+        "url": null
+      },
+      {
+        "name": "CCNA",
+        "authority": "Cisco",
+        "issue_date": null,
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Network Administrator-Senior | Previously: Information Technology Specialist at Servatron, Inc.; Support Associate 2 at Amazon | Skills: Cisco Technologies, Windows",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/millie-wilson-5970a863",
+    "full_name": null,
+    "headline": null,
+    "location": null,
+    "summary": null,
+    "current_company": null,
+    "current_title": null,
+    "current_role_start_date": null,
+    "current_role_description_text": null,
+    "experience": [],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/david-winkelman-7519882",
+    "full_name": null,
+    "headline": null,
+    "location": null,
+    "summary": null,
+    "current_company": null,
+    "current_title": null,
+    "current_role_start_date": null,
+    "current_role_description_text": null,
+    "experience": [],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/robert-w-38b40941",
+    "full_name": "Robert W.",
+    "headline": "Program & Task Order Manager at General Dynamics Information Technology",
+    "location": "Miami, Florida, United States",
+    "summary": null,
+    "current_company": "General Dynamics Information Technology",
+    "current_title": "Program & Task Order Manager",
+    "current_role_start_date": "2002-10-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Program & Task Order Manager",
+        "company": "General Dynamics Information Technology",
+        "start": "2002-10-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": "Miami, Florida",
+        "employment_type": null
+      }
+    ],
+    "education": [],
+    "volunteer_experience": [],
+    "skills": [],
+    "languages": [],
+    "certifications": [],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Program & Task Order Manager at General Dynamics Information Technology",
+    "scrape_status": "success"
+  },
+  {
+    "url": "https://www.linkedin.com/in/rickie-worrell-83163716",
+    "full_name": "Rickie Worrell",
+    "headline": "Retired",
+    "location": "Charlottesville, Virginia, United States",
+    "summary": null,
+    "current_company": "none",
+    "current_title": "Retired",
+    "current_role_start_date": "2024-11-01T00:00:00+00:00",
+    "current_role_description_text": null,
+    "experience": [
+      {
+        "title": "Retired",
+        "company": "none",
+        "start": "2024-11-01T00:00:00+00:00",
+        "end": null,
+        "description": null,
+        "location": null,
+        "employment_type": null
+      },
+      {
+        "title": "General Dynamics Information Technology",
+        "company": "7 yrs 1 mo",
+        "start": "2020-03-01T00:00:00+00:00",
+        "end": "2025-05-01T00:00:00+00:00",
+        "description": null,
+        "location": "Charlottesville, Virginia, United States",
+        "employment_type": null
+      },
+      {
+        "title": "Computer Hardware Technician Lead",
+        "company": "Leidos",
+        "start": "2014-10-01T00:00:00+00:00",
+        "end": "2020-03-01T00:00:00+00:00",
+        "description": null,
+        "location": "Chalottesville, VA",
+        "employment_type": null
+      },
+      {
+        "title": "Information Systems Specialist / ISSO",
+        "company": "Virginia Army National Guard",
+        "start": "2000-10-01T00:00:00+00:00",
+        "end": "2014-10-01T00:00:00+00:00",
+        "description": null,
+        "location": "Charlottesville, Virginia",
+        "employment_type": null
+      }
+    ],
+    "education": [
+      {
+        "school": "James Madison University",
+        "degree": "Business Administration and Management",
+        "field_of_study": "General",
+        "start": "1973-01-01T00:00:00+00:00",
+        "end": "1977-01-01T00:00:00+00:00"
+      }
+    ],
+    "volunteer_experience": [],
+    "skills": [
+      "Active Directory",
+      "Security"
+    ],
+    "languages": [],
+    "certifications": [
+      {
+        "name": "CompTIA Security+",
+        "authority": null,
+        "issue_date": null,
+        "expiration_date": null,
+        "url": null
+      },
+      {
+        "name": "Microsoft Technology Associate (MTA)",
+        "authority": "Microsoft",
+        "issue_date": null,
+        "expiration_date": null,
+        "url": null
+      }
+    ],
+    "accomplishments": [],
+    "recent_posts": [],
+    "recent_comments": [],
+    "evidence_text": "Retired | Previously: General Dynamics Information Technology at 7 yrs 1 mo; Computer Hardware Technician Lead at Leidos | Skills: Active Directory, Security",
     "scrape_status": "success"
   }
 ]
