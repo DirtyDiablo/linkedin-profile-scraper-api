@@ -10,6 +10,7 @@ interface NormalizedProfile {
   full_name: string | null;
   headline: string | null;
   location: string | null;
+  summary: string | null;
   current_company: string | null;
   current_title: string | null;
   current_role_start_date: string | null;
@@ -20,8 +21,54 @@ interface NormalizedProfile {
     start: string | null;
     end: string | null;
     description: string | null;
+    location: string | null;
+    employment_type: string | null;
+  }>;
+  education: Array<{
+    school: string | null;
+    degree: string | null;
+    field_of_study: string | null;
+    start: string | null;
+    end: string | null;
+  }>;
+  volunteer_experience: Array<{
+    title: string | null;
+    organization: string | null;
+    start: string | null;
+    end: string | null;
+    description: string | null;
   }>;
   skills: string[];
+  languages: Array<{
+    name: string | null;
+    proficiency: string | null;
+  }>;
+  certifications: Array<{
+    name: string | null;
+    authority: string | null;
+    issue_date: string | null;
+    expiration_date: string | null;
+    url: string | null;
+  }>;
+  accomplishments: Array<{
+    type: string;
+    title: string | null;
+    description: string | null;
+    date: string | null;
+    issuer: string | null;
+  }>;
+  recent_posts: Array<{
+    text: string | null;
+    date: string | null;
+    likes: number | null;
+    comments: number | null;
+    url: string | null;
+  }>;
+  recent_comments: Array<{
+    text: string | null;
+    date: string | null;
+    url: string | null;
+  }>;
   evidence_text: string;
   scrape_status: "success" | "failed";
   error_message?: string;
@@ -110,11 +157,16 @@ function generateEvidenceText(profile: any): string {
 function normalizeProfile(url: string, rawData: any): NormalizedProfile {
   const currentExp = rawData.experiences?.[0] || {};
 
+  // Separate posts and comments from activities
+  const posts = (rawData.activities || []).filter((a: any) => a.type === 'post').slice(0, 3);
+  const comments = (rawData.activities || []).filter((a: any) => a.type === 'comment').slice(0, 3);
+
   return {
     url,
     full_name: rawData.userProfile?.fullName || null,
     headline: rawData.userProfile?.title || null,
     location: formatLocation(rawData.userProfile?.location),
+    summary: rawData.userProfile?.description || null,
     current_company: currentExp.company || null,
     current_title: currentExp.title || null,
     current_role_start_date: currentExp.startDate || null,
@@ -125,8 +177,54 @@ function normalizeProfile(url: string, rawData: any): NormalizedProfile {
       start: exp.startDate || null,
       end: exp.endDateIsPresent ? null : exp.endDate || null,
       description: exp.description || null,
+      location: formatLocation(exp.location),
+      employment_type: exp.employmentType || null,
+    })),
+    education: (rawData.education || []).map((edu: any) => ({
+      school: edu.schoolName || null,
+      degree: edu.degreeName || null,
+      field_of_study: edu.fieldOfStudy || null,
+      start: edu.startDate || null,
+      end: edu.endDate || null,
+    })),
+    volunteer_experience: (rawData.volunteerExperiences || []).map((vol: any) => ({
+      title: vol.title || null,
+      organization: vol.company || null,
+      start: vol.startDate || null,
+      end: vol.endDateIsPresent ? null : vol.endDate || null,
+      description: vol.description || null,
     })),
     skills: (rawData.skills || []).map((s: any) => s.skillName || s.name).filter(Boolean),
+    languages: (rawData.languages || []).map((lang: any) => ({
+      name: lang.name || null,
+      proficiency: lang.proficiency || null,
+    })),
+    certifications: (rawData.certifications || []).map((cert: any) => ({
+      name: cert.name || null,
+      authority: cert.authority || null,
+      issue_date: cert.startDate || null,
+      expiration_date: cert.endDate || null,
+      url: cert.url || null,
+    })),
+    accomplishments: (rawData.accomplishments || []).map((acc: any) => ({
+      type: acc.type || 'unknown',
+      title: acc.title || null,
+      description: acc.description || null,
+      date: acc.date || null,
+      issuer: acc.issuer || null,
+    })),
+    recent_posts: posts.map((post: any) => ({
+      text: post.text || null,
+      date: post.date || null,
+      likes: post.likes || null,
+      comments: post.comments || null,
+      url: post.url || null,
+    })),
+    recent_comments: comments.map((comment: any) => ({
+      text: comment.text || null,
+      date: comment.date || null,
+      url: comment.url || null,
+    })),
     evidence_text: generateEvidenceText(rawData),
     scrape_status: "success",
   };
@@ -139,12 +237,20 @@ function createFailedProfile(url: string, error: Error): NormalizedProfile {
     full_name: null,
     headline: null,
     location: null,
+    summary: null,
     current_company: null,
     current_title: null,
     current_role_start_date: null,
     current_role_description_text: null,
     experience: [],
+    education: [],
+    volunteer_experience: [],
     skills: [],
+    languages: [],
+    certifications: [],
+    accomplishments: [],
+    recent_posts: [],
+    recent_comments: [],
     evidence_text: "",
     scrape_status: "failed",
     error_message: error.message,

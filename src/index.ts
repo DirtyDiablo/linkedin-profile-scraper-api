@@ -95,6 +95,37 @@ export interface Skill {
   endorsementCount: number | null;
 }
 
+export interface Language {
+  name: string | null;
+  proficiency: string | null;
+}
+
+export interface Certification {
+  name: string | null;
+  authority: string | null;
+  licenseNumber: string | null;
+  startDate: string | null;
+  endDate: string | null;
+  url: string | null;
+}
+
+export interface Accomplishment {
+  type: string; // 'honor', 'publication', 'patent', 'course', 'project', 'organization'
+  title: string | null;
+  description: string | null;
+  date: string | null;
+  issuer: string | null;
+}
+
+export interface Activity {
+  type: 'post' | 'comment';
+  text: string | null;
+  date: string | null;
+  url: string | null;
+  likes: number | null;
+  comments: number | null;
+}
+
 interface ScraperUserDefinedOptions {
   /**
    * The LinkedIn `li_at` session cookie value. Get this value by logging in to LinkedIn with the account you want to use for scraping.
@@ -1080,6 +1111,236 @@ export class LinkedInProfileScraper {
 
       statusLog(logSection, `Got skills data: ${JSON.stringify(skills)}`, scraperSessionId)
 
+      statusLog(logSection, `Parsing languages data...`, scraperSessionId)
+
+      const languages: Language[] = await page.evaluate(() => {
+        const data: Language[] = []
+
+        // Find the languages section
+        const languagesAnchor = document.querySelector('#languages')
+
+        let languageItems: NodeListOf<Element> | Element[] = []
+
+        if (languagesAnchor) {
+          const parentSection = languagesAnchor.closest('section') || languagesAnchor.parentElement?.parentElement
+          if (parentSection) {
+            languageItems = parentSection.querySelectorAll('li.artdeco-list__item')
+          }
+        }
+
+        for (const item of languageItems) {
+          const nameElement = item.querySelector('.t-bold span[aria-hidden="true"]')
+          const name = nameElement?.textContent?.trim() || null
+
+          const proficiencyElement = item.querySelector('.t-14.t-normal.t-black--light span[aria-hidden="true"]')
+          const proficiency = proficiencyElement?.textContent?.trim() || null
+
+          if (name) {
+            data.push({ name, proficiency })
+          }
+        }
+
+        return data
+      }) as Language[];
+
+      statusLog(logSection, `Got languages data: ${JSON.stringify(languages)}`, scraperSessionId)
+
+      statusLog(logSection, `Parsing certifications data...`, scraperSessionId)
+
+      const certifications: Certification[] = await page.evaluate(() => {
+        const data: Certification[] = []
+
+        // Find the certifications/licenses section
+        const certAnchor = document.querySelector('#licenses_and_certifications') ||
+          document.querySelector('#certifications')
+
+        let certItems: NodeListOf<Element> | Element[] = []
+
+        if (certAnchor) {
+          const parentSection = certAnchor.closest('section') || certAnchor.parentElement?.parentElement
+          if (parentSection) {
+            certItems = parentSection.querySelectorAll('li.artdeco-list__item')
+          }
+        }
+
+        for (const item of certItems) {
+          const nameElement = item.querySelector('.t-bold span[aria-hidden="true"]')
+          const name = nameElement?.textContent?.trim() || null
+
+          const authorityElement = item.querySelector('.t-14.t-normal span[aria-hidden="true"]')
+          const authority = authorityElement?.textContent?.trim() || null
+
+          const dateElement = item.querySelector('.t-14.t-normal.t-black--light span[aria-hidden="true"]')
+          const dateText = dateElement?.textContent?.trim() || null
+
+          // Parse dates like "Issued May 2023" or "Issued May 2023 · Expires May 2026"
+          let startDate: string | null = null
+          let endDate: string | null = null
+
+          if (dateText) {
+            const issuedMatch = dateText.match(/Issued\s+([A-Za-z]+\s+\d{4})/i)
+            if (issuedMatch) startDate = issuedMatch[1]
+
+            const expiresMatch = dateText.match(/Expires\s+([A-Za-z]+\s+\d{4})/i)
+            if (expiresMatch) endDate = expiresMatch[1]
+          }
+
+          // Try to get credential URL
+          const linkElement = item.querySelector('a[href*="credential"]')
+          const url = linkElement?.getAttribute('href') || null
+
+          if (name) {
+            data.push({
+              name,
+              authority,
+              licenseNumber: null,
+              startDate,
+              endDate,
+              url
+            })
+          }
+        }
+
+        return data
+      }) as Certification[];
+
+      statusLog(logSection, `Got certifications data: ${JSON.stringify(certifications)}`, scraperSessionId)
+
+      statusLog(logSection, `Parsing accomplishments data...`, scraperSessionId)
+
+      const accomplishments: Accomplishment[] = await page.evaluate(() => {
+        const data: Accomplishment[] = []
+
+        // Map of section IDs to accomplishment types
+        const sectionTypes: { [key: string]: string } = {
+          'honors_and_awards': 'honor',
+          'honors': 'honor',
+          'publications': 'publication',
+          'patents': 'patent',
+          'courses': 'course',
+          'projects': 'project',
+          'organizations': 'organization'
+        }
+
+        for (const [sectionId, type] of Object.entries(sectionTypes)) {
+          const anchor = document.querySelector(`#${sectionId}`)
+
+          if (anchor) {
+            const parentSection = anchor.closest('section') || anchor.parentElement?.parentElement
+            if (parentSection) {
+              const items = parentSection.querySelectorAll('li.artdeco-list__item')
+
+              for (const item of items) {
+                const titleElement = item.querySelector('.t-bold span[aria-hidden="true"]')
+                const title = titleElement?.textContent?.trim() || null
+
+                const issuerElement = item.querySelector('.t-14.t-normal span[aria-hidden="true"]')
+                const issuer = issuerElement?.textContent?.trim() || null
+
+                const dateElement = item.querySelector('.t-14.t-normal.t-black--light span[aria-hidden="true"]')
+                const date = dateElement?.textContent?.trim() || null
+
+                const descElement = item.querySelector('.inline-show-more-text span[aria-hidden="true"]')
+                const description = descElement?.textContent?.trim() || null
+
+                if (title) {
+                  data.push({ type, title, description, date, issuer })
+                }
+              }
+            }
+          }
+        }
+
+        return data
+      }) as Accomplishment[];
+
+      statusLog(logSection, `Got accomplishments data: ${JSON.stringify(accomplishments)}`, scraperSessionId)
+
+      // Scrape recent activity (posts and comments)
+      statusLog(logSection, `Scraping recent activity...`, scraperSessionId)
+
+      let activities: Activity[] = []
+
+      try {
+        // Navigate to the activity page
+        const profileUsername = profileUrl.split('/in/')[1]?.replace(/\/$/, '')
+        if (profileUsername) {
+          const activityUrl = `https://www.linkedin.com/in/${profileUsername}/recent-activity/all/`
+
+          await page.goto(activityUrl, {
+            waitUntil: 'domcontentloaded' as const,
+            timeout: this.options.timeout
+          });
+
+          // Wait for content to load
+          await new Promise(resolve => setTimeout(resolve, 3000));
+
+          // Scroll to load more activity
+          await page.evaluate(() => window.scrollBy(0, 1000));
+          await new Promise(resolve => setTimeout(resolve, 1000));
+
+          activities = await page.evaluate(() => {
+            const data: Activity[] = []
+
+            // Find activity feed items
+            const feedItems = document.querySelectorAll('.feed-shared-update-v2') ||
+              document.querySelectorAll('[data-urn*="activity"]') ||
+              document.querySelectorAll('.occludable-update')
+
+            let postCount = 0
+            let commentCount = 0
+
+            for (const item of feedItems) {
+              if (postCount >= 3 && commentCount >= 3) break
+
+              // Determine if it's a post or comment
+              const isComment = item.querySelector('.feed-shared-update-v2__commentary') !== null ||
+                item.textContent?.includes('commented on')
+
+              const type = isComment ? 'comment' : 'post'
+
+              if ((type === 'post' && postCount >= 3) || (type === 'comment' && commentCount >= 3)) {
+                continue
+              }
+
+              // Get the text content
+              const textElement = item.querySelector('.feed-shared-text span[dir="ltr"]') ||
+                item.querySelector('.feed-shared-update-v2__description span') ||
+                item.querySelector('.break-words span[aria-hidden="true"]')
+              const text = textElement?.textContent?.trim() || null
+
+              // Get date
+              const dateElement = item.querySelector('.feed-shared-actor__sub-description span[aria-hidden="true"]') ||
+                item.querySelector('time')
+              const date = dateElement?.textContent?.trim() || null
+
+              // Get engagement metrics
+              const likesElement = item.querySelector('.social-details-social-counts__reactions-count')
+              const likes = likesElement ? parseInt(likesElement.textContent?.trim() || '0') : null
+
+              const commentsElement = item.querySelector('.social-details-social-counts__comments')
+              const comments = commentsElement ? parseInt(commentsElement.textContent?.match(/\d+/)?.[0] || '0') : null
+
+              // Get URL
+              const urlElement = item.querySelector('a[href*="/feed/update/"]')
+              const url = urlElement?.getAttribute('href') || null
+
+              if (text) {
+                data.push({ type: type as 'post' | 'comment', text, date, url, likes, comments })
+                if (type === 'post') postCount++
+                else commentCount++
+              }
+            }
+
+            return data
+          }) as Activity[];
+        }
+      } catch (activityError) {
+        statusLog(logSection, `Could not scrape activity: ${activityError}`, scraperSessionId)
+      }
+
+      statusLog(logSection, `Got activity data: ${JSON.stringify(activities)}`, scraperSessionId)
+
       statusLog(logSection, `Done! Returned profile details for: ${profileUrl}`, scraperSessionId)
 
       if (!this.options.keepAlive) {
@@ -1100,7 +1361,11 @@ export class LinkedInProfileScraper {
         experiences,
         education,
         volunteerExperiences,
-        skills
+        skills,
+        languages,
+        certifications,
+        accomplishments,
+        activities
       }
     } catch (err) {
       // Kill Puppeteer
